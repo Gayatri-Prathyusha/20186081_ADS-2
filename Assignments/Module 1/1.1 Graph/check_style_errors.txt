@@ -1,9 +1,5 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:10:5: Redundant 'public' modifier. [RedundantModifier]
