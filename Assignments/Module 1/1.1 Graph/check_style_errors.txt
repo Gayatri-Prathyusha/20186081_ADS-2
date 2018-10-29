@@ -26,6 +26,32 @@ Starting audit...
 Audit done.
 Checkstyle ends with 24 errors.
 Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:10:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:10:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:16:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:16:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:23:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:24: First sentence should end with a period. [JavadocStyle]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:31:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:40:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:49:21: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:53:17: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:69:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:69:21: Parameter V should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:69:25: 'V' hides a field. [HiddenField]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:69:25: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:82:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:91:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:104:32: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:106: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:111: First sentence should end with a period. [JavadocStyle]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:130:20: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:146: Line is longer than 80 characters (found 97). [LineLength]
+Audit done.
+Checkstyle ends with 23 errors.
+Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:17: Line has trailing spaces. [RegexpSingleline]
