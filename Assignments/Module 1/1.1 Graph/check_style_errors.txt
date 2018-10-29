@@ -2,31 +2,9 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:12:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:12:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:18:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:18:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:25:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:26: First sentence should end with a period. [JavadocStyle]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:33:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:42:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:51:21: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:55:17: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:71:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:71:21: Parameter V should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:71:25: 'V' hides a field. [HiddenField]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:71:25: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:84:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:93:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:106:32: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:108: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:113: First sentence should end with a period. [JavadocStyle]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:132:20: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Solution.java:148: Line is longer than 80 characters (found 97). [LineLength]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:10:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:10:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
@@ -50,7 +28,7 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:130:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Graph.java:146: Line is longer than 80 characters (found 97). [LineLength]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 22 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
