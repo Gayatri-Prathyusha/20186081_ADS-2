@@ -20,7 +20,7 @@ class ConnectedComponents {
      * @param      g     { parameter_description }
      * @param      s     { parameter_description }
      */
-    ConnectedComponents(final Graph g, final int s) {
+    ConnectedComponents(final GraphADT g, final int s) {
         marked = new boolean[g.vertices()];
         id  = new int[g.vertices()];
         for (int i = 0; i < g.vertices(); i++) {
@@ -37,7 +37,7 @@ class ConnectedComponents {
     public int id(int v) {
         return id[v];
     }
-    private void dfs(Graph g, int v) {
+    private void dfs(GraphADT g, int v) {
         marked[v] = true;
         id[v] = count;
         for (int each : g.adj(v)) {

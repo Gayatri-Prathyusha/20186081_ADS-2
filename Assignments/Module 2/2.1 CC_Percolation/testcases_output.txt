@@ -3,8 +3,9 @@ Expected Output:
 false
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 25
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -12,8 +13,9 @@ Expected Output:
 false
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -21,8 +23,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
+	at ConnectedComponents.<init>(ConnectedComponents.java:24)
+	at Solution.main(Solution.java:16)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -30,8 +33,9 @@ Expected Output:
 false
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
+	at ConnectedComponents.<init>(ConnectedComponents.java:24)
+	at Solution.main(Solution.java:16)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -39,8 +43,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -48,8 +53,9 @@ Expected Output:
 false
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
+	at ConnectedComponents.<init>(ConnectedComponents.java:24)
+	at Solution.main(Solution.java:16)
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -57,8 +63,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -66,8 +73,10 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+	at GraphADT.hasEdge(Graph.java:130)
+	at GraphADT.addEdge(Graph.java:104)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -75,8 +84,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -84,8 +94,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 10: Failed ##########
@@ -93,8 +104,10 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 7
+	at GraphADT.hasEdge(Graph.java:130)
+	at GraphADT.addEdge(Graph.java:104)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -102,8 +115,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 12: Failed ##########
@@ -111,8 +125,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 13: Failed ##########
@@ -120,8 +135,9 @@ Expected Output:
 false
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 14: Failed ##########
@@ -129,8 +145,10 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
+	at GraphADT.hasEdge(Graph.java:130)
+	at GraphADT.addEdge(Graph.java:104)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 15: Failed ##########
@@ -138,8 +156,9 @@ Expected Output:
 false
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
+	at ConnectedComponents.<init>(ConnectedComponents.java:24)
+	at Solution.main(Solution.java:16)
 ----------------------------------------
 
 ########## Testcase 16: Failed ##########
@@ -147,8 +166,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 20
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 17: Failed ##########
@@ -156,8 +176,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 50
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 18: Failed ##########
@@ -165,8 +186,10 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 60
+	at GraphADT.hasEdge(Graph.java:130)
+	at GraphADT.addEdge(Graph.java:104)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 19: Failed ##########
@@ -174,8 +197,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 47
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 20: Failed ##########
@@ -183,8 +207,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 60
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 21: Failed ##########
@@ -192,8 +217,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 22: Failed ##########
@@ -201,8 +227,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 101
+	at GraphADT.addEdge(Graph.java:109)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 23: Failed ##########
@@ -210,7 +237,9 @@ Expected Output:
 true
 
 Your Output: 
-0
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 98
+	at GraphADT.hasEdge(Graph.java:130)
+	at GraphADT.addEdge(Graph.java:104)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
