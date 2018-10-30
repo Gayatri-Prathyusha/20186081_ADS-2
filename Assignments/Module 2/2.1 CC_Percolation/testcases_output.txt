@@ -19,9 +19,10 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at GraphADT.hasEdge(Graph.java:130)
-	at Solution.main(Solution.java:14)
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 1 is not between 0 and 0
+	at Graph.validateVertex(Graph.java:48)
+	at Graph.addEdge(Graph.java:59)
+	at Solution.main(Solution.java:13)
 ----------------------------------------
 
 ########## Testcase 3: Passed ##########

@@ -10,7 +10,7 @@ class Percolation {
     /**
      * declaration of weightqUnion.
      */
-    private GraphADT graph;
+    private Graph graph;
     /**
      * private declaration of n.
      */
@@ -46,7 +46,7 @@ class Percolation {
         this.top = size;
         this.bottom = size + 1;
         this.count = 0;
-        graph = new GraphADT(size + 2);
+        graph = new Graph(size + 2);
         connected = new boolean[size];
         for (int i = 0; i < n; i++) {
             graph.addEdge(top, i);
