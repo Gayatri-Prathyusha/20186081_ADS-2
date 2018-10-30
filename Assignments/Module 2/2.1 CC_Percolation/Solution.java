@@ -14,6 +14,8 @@ class Solution {
             graph.hasEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
  		}
  		ConnectedComponents ccobject = new ConnectedComponents(graph);
+ 		Percolation perco = new Percolation(sizeofgrid);
+ 		System.out.println(perco.percolates());
 
  	}
  }
