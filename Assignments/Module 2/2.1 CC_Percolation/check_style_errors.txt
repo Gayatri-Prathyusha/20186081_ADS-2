@@ -7,12 +7,10 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:6:33: Parameter args should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:10: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:11:22: 'while' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:13: Line is longer than 80 characters (found 96). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:14: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:10:22: 'while' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:12: Line is longer than 80 characters (found 93). [LineLength]
 Audit done.
-Checkstyle ends with 12 errors.
+Checkstyle ends with 10 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:1:8: Unused import - java.util.NoSuchElementException. [UnusedImports]
