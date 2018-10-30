@@ -12,9 +12,8 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:11:22: 'while' is not followed by whitespace. [WhitespaceAround]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:13: Line is longer than 80 characters (found 96). [LineLength]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:14: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Solution.java:16: Line is longer than 80 characters (found 90). [LineLength]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 13 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:10:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:10:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
@@ -39,6 +38,11 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:146: Line is longer than 80 characters (found 100). [LineLength]
 Audit done.
 Checkstyle ends with 21 errors.
+Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Percolation.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Percolation.java:5:8: Unused import - java.util.Scanner. [UnusedImports]
+Audit done.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
@@ -71,14 +75,15 @@ Audit done.
 Checkstyle ends with 27 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:21:8: Unused @param tag for 's'. [JavadocMethod]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:34:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:37:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:37:19: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:40:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:40:22: Parameter g should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:40:31: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:49:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:50:5: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:51:9: Conditional logic can be removed. [SimplifyBooleanReturn]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:34:30: Parameter v should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:34:37: Parameter w should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:38:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:41:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:41:19: Parameter v should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:44:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:44:22: Parameter g should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:44:31: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 11 errors.

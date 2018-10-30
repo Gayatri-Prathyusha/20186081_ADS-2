@@ -20,7 +20,7 @@ class ConnectedComponents {
      * @param      g     { parameter_description }
      * @param      s     { parameter_description }
      */
-    ConnectedComponents(final Graph g, final int s) {
+    ConnectedComponents(final Graph g) {
         marked = new boolean[g.V()];
         id  = new int[g.V()];
         for (int i = 0; i < g.V(); i++) {
@@ -31,6 +31,10 @@ class ConnectedComponents {
             }
         }
     }
+    public boolean connected(int v, int w) {
+       return id[v] == id[w];
+    }
+
     public int count() {
         return count;
     }
@@ -46,12 +50,5 @@ class ConnectedComponents {
             }
         }
     }
-    public boolean percolates() {
-    	//System.out.println(count);
-        if (count > 1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+
 }
