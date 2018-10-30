@@ -76,14 +76,13 @@ Checkstyle ends with 27 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:21:8: Unused @param tag for 's'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:34:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:34:30: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:34:37: Parameter w should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:38:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:41:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:41:19: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:44:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:44:22: Parameter g should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:44:31: Parameter v should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:42:30: Parameter v should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:42:37: Parameter w should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:46:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:49:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:49:19: Parameter v should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:52:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:52:22: Parameter g should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:52:31: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 10 errors.

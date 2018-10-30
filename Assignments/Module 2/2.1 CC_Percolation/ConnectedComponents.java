@@ -31,6 +31,14 @@ class ConnectedComponents {
             }
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean connected(int v, int w) {
        return id[v] == id[w];
     }

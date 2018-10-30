@@ -106,7 +106,7 @@ class GraphADT implements Graph {
             
         }
         adj[v].add(w);
-        adj[w].add(v);
+        //adj[w].add(v);
     }
     /**
      * { function_description }
