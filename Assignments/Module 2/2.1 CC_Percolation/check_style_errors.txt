@@ -25,11 +25,10 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:58:32: Parameter w should be final. [FinalParameters]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:74:28: Parameter v should be final. [FinalParameters]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:74:35: Parameter w should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:90:34: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:102:23: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:111: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:90:23: Parameter v should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:99: Line is longer than 80 characters (found 93). [LineLength]
 Audit done.
-Checkstyle ends with 27 errors.
+Checkstyle ends with 26 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
