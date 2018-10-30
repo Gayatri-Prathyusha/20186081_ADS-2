@@ -1,18 +1,16 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-625
 false
 ----------------------------------------
 
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-169
 false
 ----------------------------------------
 
@@ -31,7 +29,6 @@ Expected Output:
 false
 
 Your Output: 
-1
 true
 ----------------------------------------
 
@@ -40,16 +37,14 @@ Expected Output:
 true
 
 Your Output: 
-4
 false
 ----------------------------------------
 
-########## Testcase 5: Failed ##########
+########## Testcase 5: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-4
 false
 ----------------------------------------
 
@@ -58,7 +53,6 @@ Expected Output:
 true
 
 Your Output: 
-9
 false
 ----------------------------------------
 
@@ -67,7 +61,6 @@ Expected Output:
 true
 
 Your Output: 
-16
 false
 ----------------------------------------
 
@@ -76,7 +69,6 @@ Expected Output:
 true
 
 Your Output: 
-25
 false
 ----------------------------------------
 
@@ -85,7 +77,6 @@ Expected Output:
 true
 
 Your Output: 
-36
 false
 ----------------------------------------
 
@@ -94,7 +85,6 @@ Expected Output:
 true
 
 Your Output: 
-49
 false
 ----------------------------------------
 
@@ -103,7 +93,6 @@ Expected Output:
 true
 
 Your Output: 
-64
 false
 ----------------------------------------
 
@@ -112,16 +101,14 @@ Expected Output:
 true
 
 Your Output: 
-64
 false
 ----------------------------------------
 
-########## Testcase 13: Failed ##########
+########## Testcase 13: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-169
 false
 ----------------------------------------
 
@@ -130,16 +117,14 @@ Expected Output:
 true
 
 Your Output: 
-100
 false
 ----------------------------------------
 
-########## Testcase 15: Failed ##########
+########## Testcase 15: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-2500
 false
 ----------------------------------------
 
@@ -148,7 +133,6 @@ Expected Output:
 true
 
 Your Output: 
-400
 false
 ----------------------------------------
 
@@ -157,7 +141,6 @@ Expected Output:
 true
 
 Your Output: 
-2500
 false
 ----------------------------------------
 
@@ -166,7 +149,6 @@ Expected Output:
 true
 
 Your Output: 
-3600
 false
 ----------------------------------------
 
@@ -175,7 +157,6 @@ Expected Output:
 true
 
 Your Output: 
-2209
 false
 ----------------------------------------
 
@@ -184,7 +165,6 @@ Expected Output:
 true
 
 Your Output: 
-3600
 false
 ----------------------------------------
 
@@ -193,7 +173,6 @@ Expected Output:
 true
 
 Your Output: 
-169
 false
 ----------------------------------------
 
@@ -202,7 +181,6 @@ Expected Output:
 true
 
 Your Output: 
-10201
 false
 ----------------------------------------
 
@@ -211,7 +189,6 @@ Expected Output:
 true
 
 Your Output: 
-9604
 false
 ----------------------------------------
 

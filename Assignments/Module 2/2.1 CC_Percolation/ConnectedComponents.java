@@ -47,7 +47,7 @@ class ConnectedComponents {
         }
     }
     public boolean percolates() {
-    	System.out.println(count);
+    	//System.out.println(count);
         if (count > 1) {
             return false;
         } else {
