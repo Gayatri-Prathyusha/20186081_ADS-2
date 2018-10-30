@@ -11,7 +11,7 @@ class Solution {
  		while(sc.hasNext()) {
  			String[] tokens = sc.nextLine().split(" ");
  			graph.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-            graph.hasEdge(Integer.parseInt(tokens[0]) - 1, Integer.parseInt(tokens[1]) - 1);
+            graph.hasEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
  		}
  		ConnectedComponents ccobject = new ConnectedComponents(graph, sizeofgrid);
  		System.out.println(ccobject.percolates());

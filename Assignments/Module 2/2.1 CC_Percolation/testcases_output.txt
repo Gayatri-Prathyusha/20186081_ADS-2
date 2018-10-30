@@ -3,9 +3,8 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+625
+false
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -13,9 +12,8 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+169
+false
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -23,9 +21,9 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at GraphADT.hasEdge(Graph.java:130)
+	at Solution.main(Solution.java:14)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -33,9 +31,8 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+1
+true
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -43,9 +40,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+4
+false
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -53,9 +49,8 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+4
+false
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -63,9 +58,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+9
+false
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -73,9 +67,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+16
+false
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -83,9 +76,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+25
+false
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -93,9 +85,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+36
+false
 ----------------------------------------
 
 ########## Testcase 10: Failed ##########
@@ -103,9 +94,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+49
+false
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -113,9 +103,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+64
+false
 ----------------------------------------
 
 ########## Testcase 12: Failed ##########
@@ -123,9 +112,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+64
+false
 ----------------------------------------
 
 ########## Testcase 13: Failed ##########
@@ -133,9 +121,8 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+169
+false
 ----------------------------------------
 
 ########## Testcase 14: Failed ##########
@@ -143,9 +130,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+100
+false
 ----------------------------------------
 
 ########## Testcase 15: Failed ##########
@@ -153,9 +139,8 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+2500
+false
 ----------------------------------------
 
 ########## Testcase 16: Failed ##########
@@ -163,9 +148,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+400
+false
 ----------------------------------------
 
 ########## Testcase 17: Failed ##########
@@ -173,9 +157,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+2500
+false
 ----------------------------------------
 
 ########## Testcase 18: Failed ##########
@@ -183,9 +166,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+3600
+false
 ----------------------------------------
 
 ########## Testcase 19: Failed ##########
@@ -193,9 +175,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+2209
+false
 ----------------------------------------
 
 ########## Testcase 20: Failed ##########
@@ -203,9 +184,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+3600
+false
 ----------------------------------------
 
 ########## Testcase 21: Failed ##########
@@ -213,9 +193,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+169
+false
 ----------------------------------------
 
 ########## Testcase 22: Failed ##########
@@ -223,9 +202,8 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+10201
+false
 ----------------------------------------
 
 ########## Testcase 23: Failed ##########
@@ -233,8 +211,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: GraphADT.vertices()I
-	at ConnectedComponents.<init>(ConnectedComponents.java:24)
-	at Solution.main(Solution.java:16)
+9604
+false
 ----------------------------------------
 
