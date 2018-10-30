@@ -29,7 +29,6 @@ class Graph {
         if (vertexOne != vertexTwo) {
             if (!hasEdge(vertexOne, vertexTwo)) {
                 grid[vertexOne][vertexTwo] = 1;
-                // grid[vertexTwo][vertexOne] = 1;
                 edges++;
             }
         }
@@ -40,9 +39,7 @@ class Graph {
         }
         return false;
     }
-    // public void connected(final int v1, final int w1) {
-    //     grid[v1][w1] = 1;
-    // }
+
     public int[] adj(final int v) {
         return grid[v];
     }
