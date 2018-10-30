@@ -7,7 +7,7 @@ class Solution {
  		Scanner sc = new Scanner(System.in);
 
  		int sizeofgrid = Integer.parseInt(sc.nextLine());
- 		GraphADT graph = new GraphADT(sizeofgrid); 		
+ 		GraphADT graph = new GraphADT(sizeofgrid * sizeofgrid); 		
  		while(sc.hasNext()) {
  			String[] tokens = sc.nextLine().split(" ");
  			graph.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
