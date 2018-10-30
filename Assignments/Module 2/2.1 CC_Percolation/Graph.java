@@ -1,7 +1,5 @@
 import java.util.NoSuchElementException;
-/**
- * Class for graph.
- */
+
 public class Graph {
     private static final String NEWLINE = System.getProperty("line.separator");
 

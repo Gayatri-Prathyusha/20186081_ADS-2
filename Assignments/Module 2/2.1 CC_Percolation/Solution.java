@@ -1,22 +1,23 @@
+// You can implement the above API to solve the problem
 import java.util.Scanner;
 /**
  * Class for percolation.
  */
 class Percolation {
     /**
-     *the boolean array.
+     *the array.
      */
     private boolean[] array;
     /**
-     *object declaration.
+     *object declaration for class.
      */
     private Graph graph;
     /**
-     * variable for array size.
+     *array size.
      */
     private int arraySize;
     /**
-     * variable for size.
+     *size.
      */
     private int size;
     /**
@@ -24,13 +25,13 @@ class Percolation {
      */
     private int count;
     /**
-     *first variable.
+     *first row.
      */
-    private int first;
+    private int top;
     /**
-     * last variable.
+     * last row.
      */
-    private int last;
+    private int bottom;
     /**
      * Constructs the object.
      */
@@ -45,14 +46,14 @@ class Percolation {
     Percolation(final int n) {
         this.arraySize = n;
         this.size = n * n;
-        this.first = size;
-        this.last = size + 1;
+        this.top = size;
+        this.bottom = size + 1;
         this.count = 0;
         graph = new Graph(size + 2);
         array = new boolean[size];
         for (int i = 0; i < arraySize; i++) {
-            graph.addEdge(first, i);
-            graph.addEdge(last, size - i - 1);
+            graph.addEdge(top, i);
+            graph.addEdge(bottom, size - i - 1);
         }
     }
     /**
@@ -87,17 +88,17 @@ class Percolation {
         int index = toOneD(row, col);
         array[index] = true;
         count++;
-        int firstrow = index - arraySize;
-        int lastrow = index + arraySize;
+        int toprow = index - arraySize;
+        int bottomrow = index + arraySize;
         if (arraySize == 1) {
-            graph.addEdge(first, index);
-            graph.addEdge(last, index);
+            graph.addEdge(top, index);
+            graph.addEdge(bottom, index);
         }
-        if (lastrow < size) {         //last
-            connectOpenSites(index, lastrow);
+        if (bottomrow < size) {         //bottom
+            connectOpenSites(index, bottomrow);
         }
-        if (firstrow >= 0) {              //first
-            connectOpenSites(index, firstrow);
+        if (toprow >= 0) {              //top
+            connectOpenSites(index, toprow);
         }
         if (col == 1) {                 //left
             if (col != arraySize) {
@@ -138,7 +139,7 @@ class Percolation {
      */
     public boolean percolates() {
         ConnectedComponents cc = new ConnectedComponents(graph);
-        return cc.connected(first, last);
+        return cc.connected(top, bottom);
     }
 }
 /**
@@ -149,12 +150,12 @@ public final class Solution {
      * Constructs the object.
      */
     protected Solution() {
-        //unused constructor.
+
     }
     /**
-     * Client program.
+     * main method to read input.
      *
-     * @param      args  The arguments
+     * @param args String
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
