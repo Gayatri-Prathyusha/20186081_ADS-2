@@ -1,69 +1,69 @@
 /**
- * percolation theory.
- * @author Gayatri Prathyusha.
- */
-import java.util.Scanner;
-/**
  * Class for percolation.
  */
 class Percolation {
     /**
-     * declaration of weightqUnion.
+     *the boolean array.
+     */
+    private boolean[] array;
+    /**
+     *object declaration.
      */
     private Graph graph;
     /**
-     * private declaration of n.
+     * variable for array size.
      */
-    private int n;
+    private int arraySize;
     /**
-     * declaration of size.
+     * variable for size.
      */
     private int size;
     /**
-     * declaration of top.
-     */
-    private int top;
-    /**
-     * declaration of bottom.
-     */
-    private int bottom;
-    /**
-     * declaration of count.
+     * initializing count.
      */
     private int count;
     /**
-     * declaration of boolean array.
+     *first variable.
      */
-    private boolean[] connected;
+    private int first;
+    /**
+     * last variable.
+     */
+    private int last;
+    /**
+     * Constructs the object.
+     */
+    protected Percolation() {
+
+    }
     /**
      * Constructs the object.
      *
-     * @param      n1    The n 1
+     * @param n int
      */
-    Percolation(final int n1) {
-        this.n = n1;
-        this.size = n1 * n1;
-        this.top = size;
-        this.bottom = size + 1;
+    Percolation(final int n) {
+        this.arraySize = n;
+        this.size = n * n;
+        this.first = size;
+        this.last = size + 1;
         this.count = 0;
         graph = new Graph(size + 2);
-        connected = new boolean[size];
-        for (int i = 0; i < n; i++) {
-            graph.addEdge(top, i);
-            graph.addEdge(bottom, size - i);
+        array = new boolean[size];
+        for (int i = 0; i < arraySize; i++) {
+            graph.addEdge(first, i);
+            graph.addEdge(last, size - i - 1);
         }
     }
     /**
-     * converts to 1D array.
+     * method to convert from two dimensional to one dimensional.
      *
-     * @param      i     { parameter_description }
-     * @param      j     { parameter_description }
+     * @param      row   The row
+     * @param      col   The col
      *
-     * @return     { description_of_the_return_value }
+     * @return  onedimensional array
      */
-    private int convert(final int i, final int j) {
-    //since we take size as 0 to n-1, we decrement one value from rows and columns.
-        return n * (i) + (j);
+    public int toOneD(final int row, final int col) {
+        return (arraySize * (row - 1)) + (col - 1);
     }
     /**
      * Connects open sites(== full site).
@@ -72,40 +72,39 @@ class Percolation {
      * @param      col   The col
      */
     private void connectOpenSites(final int row, final int col) {
-        if (connected[col] && !graph.hasEdge(row, col)) {
+        if (array[col] && !graph.hasEdge(row, col)) {
             graph.addEdge(row, col);
         }
     }
     /**
-     * opens the blocked sites.
+     * method that opens the blocked site.
      *
-     * @param      row   The row
-     * @param      col   The col
+     * @param      row     The row
+     * @param      col  The column
      */
     public void open(final int row, final int col) {
-        // int count = 0;
-        int index = convert(row, col);
-        connected[index] = true;
+        int index = toOneD(row, col);
+        array[index] = true;
         count++;
-        int toprow = index - n;
-        int bottomrow = index + n;
-        if (n == 1) {
-            graph.addEdge(top, index);
-            graph.addEdge(bottom, index);
+        int firstrow = index - arraySize;
+        int lastrow = index + arraySize;
+        if (arraySize == 1) {
+            graph.addEdge(first, index);
+            graph.addEdge(last, index);
         }
-        if (bottomrow < size) { //bottom
-            connectOpenSites(index, bottomrow);
+        if (lastrow < size) {         //last
+            connectOpenSites(index, lastrow);
         }
-        if (toprow >= 0) { //top
-            connectOpenSites(index, toprow);
+        if (firstrow >= 0) {              //first
+            connectOpenSites(index, firstrow);
         }
-        if (col == 1) { //left
-            if (col != n) {
+        if (col == 1) {                 //left
+            if (col != arraySize) {
                 connectOpenSites(index, index + 1);
             }
             return;
         }
-        if (col == n) { //right
+        if (col == arraySize) {         //right
             connectOpenSites(index, index - 1);
             return;
         }
@@ -113,7 +112,7 @@ class Percolation {
         connectOpenSites(index, index - 1);
     }
     /**
-     * Determines if it is an open site.
+     * Determines if open.
      *
      * @param      row   The row
      * @param      col   The col
@@ -121,23 +120,23 @@ class Percolation {
      * @return     True if open, False otherwise.
      */
     public boolean isOpen(final int row, final int col) {
-        return connected[convert(row, col)];
+        return array[toOneD(row, col)];
     }
     /**
-     * counts number of open sites.
+     * return number of open sites.
      *
-     * @return     { description_of_the_return_value }
+     * @return count
      */
-    public int findOpenSites() {
+    public int numberOfOpenSites() {
         return count;
     }
     /**
-     * returns true if percolates.
+     * method to check whether there is a flow.
      *
-     * @return     { description_of_the_return_value }
+     * @return boolean
      */
     public boolean percolates() {
         ConnectedComponents cc = new ConnectedComponents(graph);
-        return cc.connected(top, bottom);
+        return cc.connected(first, last);
     }
 }
