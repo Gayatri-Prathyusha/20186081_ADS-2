@@ -127,8 +127,8 @@ class GraphADT implements Graph {
      * @return     True if has edge, False otherwise.
      */
     public boolean hasEdge(final int v, final int w) {
-        for(int k : adj[v]) {
-                if (k == w) {
+        for(int k : adj[w]) {
+                if (k == v) {
                     return true;
                 }
         }
