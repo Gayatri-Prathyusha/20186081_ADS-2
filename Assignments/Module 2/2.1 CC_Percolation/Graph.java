@@ -134,31 +134,31 @@ class GraphADT implements Graph {
         }
         return false;
     }
-    /**.
-     * To display the list.
-     *
-     * @param      v2          { parameter_description }
-     * @param      e2          { parameter_description }
-     * @param      tokens     The tokens
-     *
-     * @throws     Exception  { exception_description }
-     */
-    public void listdisplay(final int v2, final int e2, final String[] tokens) throws Exception {
-        if (e2 <= 1 && v2 <= 1) {
-            System.out.println(V() + " vertices" + ", " + E() + " edges");
-            throw new Exception("No edges");
-        } else {
-            System.out.println(V() + " vertices" + ", " + E() + " edges");
-            for (int i = 0; i < tokens.length; i++) {
-            String str = "";
-            str = tokens[i] + ": ";
-            for (int k : adj(i)) {
-                str = str + tokens[k] + " ";
-            }
-            System.out.println(str);
-            }
-        }
-    }
+    // /**.
+    //  * To display the list.
+    //  *
+    //  * @param      v2          { parameter_description }
+    //  * @param      e2          { parameter_description }
+    //  * @param      tokens     The tokens
+    //  *
+    //  * @throws     Exception  { exception_description }
+    //  */
+    // public void listdisplay(final int v2, final int e2, final String[] tokens) throws Exception {
+    //     if (e2 <= 1 && v2 <= 1) {
+    //         System.out.println(V() + " vertices" + ", " + E() + " edges");
+    //         throw new Exception("No edges");
+    //     } else {
+    //         System.out.println(V() + " vertices" + ", " + E() + " edges");
+    //         for (int i = 0; i < tokens.length; i++) {
+    //         String str = "";
+    //         str = tokens[i] + ": ";
+    //         for (int k : adj(i)) {
+    //             str = str + tokens[k] + " ";
+    //         }
+    //         System.out.println(str);
+    //         }
+    //     }
+    // }
 
     /**
      * to display the matrix.
