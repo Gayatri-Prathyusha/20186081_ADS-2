@@ -47,8 +47,9 @@ Checkstyle ends with 28 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Percolation.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Percolation.java:5:8: Unused import - java.util.Scanner. [UnusedImports]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Percolation.java:65: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:14: Line has trailing spaces. [RegexpSingleline]

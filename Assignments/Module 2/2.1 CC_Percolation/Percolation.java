@@ -50,7 +50,7 @@ class Percolation {
         connected = new boolean[size];
         for (int i = 0; i < n; i++) {
             graph.addEdge(top, i);
-            graph.addEdge(bottom, size - i - 1);
+            graph.addEdge(bottom, size - i);
         }
     }
     /**
@@ -62,8 +62,8 @@ class Percolation {
      * @return     { description_of_the_return_value }
      */
     private int convert(final int i, final int j) {
-//since we take size as 0 to n-1, we decrement one value from rows and columns.
-        return n * (i - 1) + (j - 1);
+    //since we take size as 0 to n-1, we decrement one value from rows and columns.
+        return n * (i) + (j);
     }
     /**
      * Connects open sites(== full site).
