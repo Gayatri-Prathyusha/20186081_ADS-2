@@ -10,14 +10,19 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- *  The <tt>Bag</tt> class represents a bag (or multiset) of 
- *  generic items. It supports insertion and iterating over the 
+ *  The <tt>Bag</tt> class represents
+ *  a bag (or multiset) of 
+ *  generic items. It supports insertion and
+ *  iterating over the 
  *  items in arbitrary order.
  *  <p>
- *  The <em>add</em>, <em>isEmpty</em>, and <em>size</em>  operation 
- *  take constant time. Iteration takes time proportional to the number of items.
+ *  The <em>add</em>, <em>isEmpty</em>, and
+ *  <em>size</em>  operation 
+ *  take constant time. Iteration takes time
+ *  proportional to the number of items.
  *  <p>
- *  For additional documentation, see <a href="http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
+ *  For additional documentation, see <a
+ *  href="http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
  */
 public class Bag<Item> implements Iterable<Item> {
@@ -51,9 +56,10 @@ public class Bag<Item> implements Iterable<Item> {
     public int size() {
         return N;
     }
-
-   /**
+    /**
      * Add the item to the bag.
+     *
+     * @param      item  The item
      */
     public void add(Item item) {
         Node oldfirst = first;
@@ -62,21 +68,34 @@ public class Bag<Item> implements Iterable<Item> {
         first.next = oldfirst;
         N++;
     }
-   /**
+    /**
      * Return an iterator that iterates over the items in the bag.
+     *
+     * @return     { description_of_the_return_value }
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator();  
+        return new ListIterator();
     }
     /**
      * Class for list iterator.
      * an iterator, doesn't implement remove() since it's optional.
      */
     private class ListIterator implements Iterator<Item> {
+        /**
+         * current.
+         */
         private Node current = first;
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
         public boolean hasNext() {
             return current != null;
             }
+        /**
+         * remove method.
+         */
         public void remove() {
            throw new UnsupportedOperationException();
         }
