@@ -26,12 +26,26 @@ import java.util.NoSuchElementException;
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
  */
 public class Bag<Item> implements Iterable<Item> {
-    private int N;         // number of elements in bag
-    private Node first;    // beginning of bag
-
-    // helper linked list class
+    /**
+     * number of elements in bag
+     */
+    private int N;
+    /**
+     * beginning of bag
+     */
+    private Node first;
+    /**
+     * Class for node.
+     * helper linked list class
+     */
     private class Node {
+        /**
+         * item.
+         */
         private Item item;
+        /**
+         * next.
+         */
         private Node next;
     }
 
@@ -42,16 +56,18 @@ public class Bag<Item> implements Iterable<Item> {
         first = null;
         N = 0;
     }
-
-   /**
+    /**
+     * Determines if empty.
      * Is the BAG empty?
+     * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
         return first == null;
     }
-
-   /**
+    /**
      * Return the number of items in the bag.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         return N;
@@ -61,7 +77,7 @@ public class Bag<Item> implements Iterable<Item> {
      *
      * @param      item  The item
      */
-    public void add(Item item) {
+    public void add(final Item item) {
         Node oldfirst = first;
         first = new Node();
         first.item = item;

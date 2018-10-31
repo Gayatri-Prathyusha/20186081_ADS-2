@@ -7,14 +7,8 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:16: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:20: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:28: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:29:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:29:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:30:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:33: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:34:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:35:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:49: Expected @return tag. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:56: Expected @return tag. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:64:21: Parameter item should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:29: First sentence should end with a period. [JavadocStyle]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:32:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:33: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 7 errors.
