@@ -1,16 +1,7 @@
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:4:8: Unused import - java.util.NoSuchElementException. [UnusedImports]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:9: First sentence should end with a period. [JavadocStyle]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:29:8: Unused @param tag for 'V'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:32:28: Expected @param tag for 'vertices1'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:33: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:62:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:63: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:64:58: '+' should be on a new line. [OperatorWrap]
 Audit done.
-Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:14: Line has trailing spaces. [RegexpSingleline]

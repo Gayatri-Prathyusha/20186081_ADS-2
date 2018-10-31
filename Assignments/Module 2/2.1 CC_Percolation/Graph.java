@@ -1,13 +1,9 @@
 /**
- * No such exception importing to avoid exeption.
- */
-import java.util.NoSuchElementException;
-/**
  * Class for graph.
  */
 public class Graph {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private static final String NEWLINE = System.getProperty("line.separator");
     /**
@@ -26,12 +22,14 @@ public class Graph {
      * Initializes an empty graph with {@code V} vertices and 0 edges.
      * param V the number of vertices
      *
-     * @param  V number of vertices
+     * @param  vertices1 number of vertices
      * @throws IllegalArgumentException if {@code V < 0}
      */
     public Graph(final int vertices1) {
-        if (vertices1 < 0) throw new IllegalArgumentException(
+        if (vertices1 < 0) {
+            throw new IllegalArgumentException(
             "Number of vertices must be nonnegative");
+        }
         this.vertices = vertices1;
         this.edges = 0;
         adj = (Bag<Integer>[]) new Bag[vertices1];
@@ -58,11 +56,16 @@ public class Graph {
         return edges;
     }
 
-    // throw an IllegalArgumentException unless {@code 0 <= v < V}
+    /**
+     * throw an IllegalArgumentException unless {@code 0 <= v < V}.
+     *
+     * @param      v     { parameter_description }
+     */
     private void validateVertex(final int v) {
-        if (v < 0 || v >= vertices)
-            throw new IllegalArgumentException("vertex " +
-             v + " is not between 0 and " + (vertices - 1));
+        if (v < 0 || v >= vertices) {
+            throw new IllegalArgumentException("vertex "
+                + v + " is not between 0 and " + (vertices - 1));
+        }
     }
 
     /**
