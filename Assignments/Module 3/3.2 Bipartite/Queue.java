@@ -1,11 +1,11 @@
 /*************************************************************************
  *  Compilation:  javac Queue.java
  *  Execution:    java Queue < input.txt
- *  Data files:   http://algs4.cs.princeton.edu/13stacks/tobe.txt  
+ *  Data files:   http://algs4.cs.princeton.edu/13stacks/tobe.txt
  *
  *  A generic queue, implemented using a linked list.
  *
- *  % java Queue < tobe.txt 
+ *  % java Queue < tobe.txt
  *  to be or not to be (2 left on queue)
  *
  *************************************************************************/
@@ -35,15 +35,15 @@ import java.util.NoSuchElementException;
  */
 public class Queue<Item> implements Iterable<Item> {
     /**
-     * number of elements on queue
+     * number of elements on queue.
      */
     private int no;
     /**
-     * beginning of queue
+     * beginning of queue.
      */
     private Node first;
     /**
-     * end of queue
+     * end of queue.
      */
     private Node last;
 
@@ -84,7 +84,7 @@ public class Queue<Item> implements Iterable<Item> {
      * @return     int.
      */
     public int size() {
-        return no;     
+        return no;
     }
     /**
      * Return the item least recently added to the queue.
@@ -106,8 +106,13 @@ public class Queue<Item> implements Iterable<Item> {
     public void enqueue(final Item item) {
         Node x = new Node();
         x.item = item;
-        if (isEmpty()) { first = x;     last = x; }
-        else           { last.next = x; last = x; }
+        if (isEmpty()) {
+            first = x;
+            last = x;
+        } else {
+            last.next = x;
+            last = x;
+        }
         no++;
     }
     /**
@@ -117,11 +122,15 @@ public class Queue<Item> implements Iterable<Item> {
      * @return     Item.
      */
     public Item dequeue() {
-        if (isEmpty()) throw new RuntimeException("Queue underflow");
+        if (isEmpty()) {
+            throw new RuntimeException("Queue underflow");
+        }
         Item item = first.item;
         first = first.next;
         no--;
-        if (isEmpty()) last = null;   // to avoid loitering
+        if (isEmpty()) { 
+            last = null;   // to avoid loitering
+        }
         return item;
     }
     /**
@@ -137,12 +146,13 @@ public class Queue<Item> implements Iterable<Item> {
         return s.toString();
     }
     /**
-     * Return an iterator that iterates over the items on the queue in FIFO order.
+     * Return an iterator that iterates over the
+     * items on the queue in FIFO order.
      *
      * @return     List Iterable.
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator();  
+        return new ListIterator();
     }
     /**
      * an iterator, doesn't implement remove() since it's optional.
