@@ -8,12 +8,11 @@
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 /**
  *  The <tt>Bag</tt> class represents
- *  a bag (or multiset) of 
+ *  a bag (or multiset) of
  *  generic items. It supports insertion and
- *  iterating over the 
+ *  iterating over the
  *  items in arbitrary order.
  *  <p>
  *  The <em>add</em>, <em>isEmpty</em>, and
@@ -27,11 +26,11 @@ import java.util.NoSuchElementException;
  */
 public class Bag<Item> implements Iterable<Item> {
     /**
-     * number of elements in bag
+     * number of elements in bag.
      */
-    private int N;
+    private int no;
     /**
-     * beginning of bag
+     * beginning of bag.
      */
     private Node first;
     /**
@@ -48,13 +47,12 @@ public class Bag<Item> implements Iterable<Item> {
          */
         private Node next;
     }
-
    /**
      * Create an empty stack.
      */
     public Bag() {
         first = null;
-        N = 0;
+        no = 0;
     }
     /**
      * Determines if empty.
@@ -70,7 +68,7 @@ public class Bag<Item> implements Iterable<Item> {
      * @return     { description_of_the_return_value }
      */
     public int size() {
-        return N;
+        return no;
     }
     /**
      * Add the item to the bag.
@@ -82,7 +80,7 @@ public class Bag<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        no++;
     }
     /**
      * Return an iterator that iterates over the items in the bag.

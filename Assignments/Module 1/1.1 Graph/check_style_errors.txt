@@ -3,12 +3,7 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:16: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:20: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:28: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:29: First sentence should end with a period. [JavadocStyle]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:32:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:33: First sentence should end with a period. [JavadocStyle]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:19: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 1/1.1 Graph/Bag.java:27: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 2 errors.
