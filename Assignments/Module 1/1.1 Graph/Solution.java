@@ -22,11 +22,9 @@ public final class Solution {
         int edges = Integer.parseInt(scan.nextLine());
         String[] data = scan.nextLine().split(",");
         graph = new GraphADT(vertices);
-        // System.out.println(Arrays.toString(data));
         while (scan.hasNext()) {
             String connect = scan.nextLine();
             String[] connector = connect.split(" ");
-            // System.out.println(Arrays.toString(connector));
             graph.addEdge(Integer.parseInt(connector[0]),
             Integer.parseInt(connector[1]));
         }
