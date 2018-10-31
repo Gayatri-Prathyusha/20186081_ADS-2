@@ -11,7 +11,7 @@ public class ConnectedComponents {
      */
     private int[] id;
     /**
-     * size[id] = number of vertices in given component.     
+     * size[id] = number of vertices in given component. 
      */
     private int[] size;
     /**
@@ -136,7 +136,7 @@ public class ConnectedComponents {
         int v1 = marked.length;
         if (v < 0 || v >= v1) {
             throw new IllegalArgumentException("vertex "
-            	+ v + " is not between 0 and " + (v1 - 1));
+                + v + " is not between 0 and " + (v1 - 1));
         }
     }
 }

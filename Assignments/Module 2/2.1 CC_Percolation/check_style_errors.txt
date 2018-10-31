@@ -58,6 +58,5 @@ Audit done.
 Checkstyle ends with 27 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:14: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/ConnectedComponents.java:139:13: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
