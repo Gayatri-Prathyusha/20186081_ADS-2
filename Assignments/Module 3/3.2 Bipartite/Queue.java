@@ -128,7 +128,7 @@ public class Queue<Item> implements Iterable<Item> {
         Item item = first.item;
         first = first.next;
         no--;
-        if (isEmpty()) { 
+        if (isEmpty()) {
             last = null;   // to avoid loitering
         }
         return item;
