@@ -1,31 +1,16 @@
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:1:8: Unused import - java.util.NoSuchElementException. [UnusedImports]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:3: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:4:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:6:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:7:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:8:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:14:8: Unused @param tag for 'V'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:17:18: Parameter vertices1 should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:17:22: Expected @param tag for 'vertices1'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:18: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:18: Line is longer than 80 characters (found 104). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:46:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:46:33: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:47: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:48: Line is longer than 80 characters (found 106). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:56: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:58:25: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:58:32: Parameter w should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:74:28: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:74:35: Parameter w should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:90:34: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:102:23: Parameter v should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:111: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:4:8: Unused import - java.util.NoSuchElementException. [UnusedImports]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:9: First sentence should end with a period. [JavadocStyle]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:29:8: Unused @param tag for 'V'. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:32:28: Expected @param tag for 'vertices1'. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:33: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:62:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:63: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Graph.java:64:58: '+' should be on a new line. [OperatorWrap]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 2/2.1 CC_Percolation/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
