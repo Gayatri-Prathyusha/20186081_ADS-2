@@ -1,8 +1,21 @@
 public class ConnectedComponents {
-    private boolean[] marked;   // marked[v] = has vertex v been marked?
-    private int[] id;           // id[v] = id of connected component containing v
-    private int[] size;         // size[id] = number of vertices in given component
-    private int count;          // number of connected components
+	
+    /**
+     *  marked[v] = has vertex v been marked?
+     */
+    private boolean[] marked;
+    /**
+     * id[v] = id of connected component containing v
+     */
+    private int[] id;
+    /**
+     * size[id] = number of vertices in given component     
+     */
+    private int[] size;
+    /**
+     * number of connected components
+     */
+    private int count;
 
     /**
      * Computes the connected components of the undirected graph {@code G}.
@@ -107,6 +120,6 @@ public class ConnectedComponents {
     private void validateVertex(int v) {
         int V = marked.length;
         if (v < 0 || v >= V)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
+            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
     }
 }
