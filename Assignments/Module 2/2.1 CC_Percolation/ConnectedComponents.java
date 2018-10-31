@@ -20,53 +20,62 @@ public class ConnectedComponents {
     /**
      * Computes the connected components of the undirected graph {@code G}.
      *
-     * @param G the undirected graph
+     * @param graph1 the undirected graph
      */
-    public ConnectedComponents(Graph G) {
-        marked = new boolean[G.V()];
-        id = new int[G.V()];
-        size = new int[G.V()];
-        for (int v = 0; v < G.V(); v++) {
+    public ConnectedComponents(final Graph graph1) {
+        marked = new boolean[graph1.vertices()];
+        id = new int[graph1.vertices()];
+        size = new int[graph1.vertices()];
+        for (int v = 0; v < graph1.vertices(); v++) {
             if (!marked[v]) {
-                dfs(G, v);
+                dfs(graph1, v);
                 count++;
             }
         }
     }
 
-    // depth-first search for a Graph
-    private void dfs(Graph G, int v) {
+    /**
+     * depth-first search for a Graph
+     *
+     * @param      graph1  The graph 1
+     * @param      v       { parameter_description }
+     */
+    private void dfs(final Graph graph1, final int v) {
         marked[v] = true;
         id[v] = count;
         size[count]++;
-        for (int w : G.adj(v)) {
+        for (int w : graph1.adj(v)) {
             if (!marked[w]) {
-                dfs(G, w);
+                dfs(graph1, w);
             }
         }
     }
 
 
     /**
-     * Returns the component id of the connected component containing vertex {@code v}.
+     * Returns the component id of the connected
+     * component containing vertex {@code v}.
      *
      * @param  v the vertex
-     * @return the component id of the connected component containing vertex {@code v}
+     * @return the component id of the
+     * connected component containing vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public int id(int v) {
+    public int id(final int v) {
         validateVertex(v);
         return id[v];
     }
 
     /**
-     * Returns the number of vertices in the connected component containing vertex {@code v}.
+     * Returns the number of vertices in the connected
+     * component containing vertex {@code v}.
      *
      * @param  v the vertex
-     * @return the number of vertices in the connected component containing vertex {@code v}
+     * @return the number of vertices in the
+     * connected component containing vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public int size(int v) {
+    public int size(final int v) {
         validateVertex(v);
         return size[id[v]];
     }
@@ -91,7 +100,7 @@ public class ConnectedComponents {
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      * @throws IllegalArgumentException unless {@code 0 <= w < V}
      */
-    public boolean connected(int v, int w) {
+    public boolean connected(final int v, final int w) {
         validateVertex(v);
         validateVertex(w);
         return id(v) == id(w);
@@ -110,16 +119,23 @@ public class ConnectedComponents {
      * @deprecated Replaced by {@link #connected(int, int)}.
      */
     @Deprecated
-    public boolean areConnected(int v, int w) {
+    public boolean areConnected(final int v, final int w) {
         validateVertex(v);
         validateVertex(w);
         return id(v) == id(w);
     }
 
-    // throw an IllegalArgumentException unless {@code 0 <= v < V}
-    private void validateVertex(int v) {
-        int V = marked.length;
-        if (v < 0 || v >= V)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
+    /**
+     * throw an IllegalArgumentException unless {@code 0 <= v < V}.
+     *
+     * @param      v     { parameter_description }
+     */
+    private void validateVertex(final int v) {
+        int v1 = marked.length;
+        if (v < 0 || v >= v1) {
+            throw new IllegalArgumentException("vertex " +
+             v + " is not between 0 and " + (v1 - 1));
+        }
     }
 }
+
