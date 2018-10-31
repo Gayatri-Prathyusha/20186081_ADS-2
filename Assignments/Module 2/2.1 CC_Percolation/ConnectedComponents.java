@@ -11,7 +11,7 @@ public class ConnectedComponents {
      */
     private int[] id;
     /**
-     * size[id] = number of vertices in given component. 
+     * size[id] = number of vertices in given component.
      */
     private int[] size;
     /**
