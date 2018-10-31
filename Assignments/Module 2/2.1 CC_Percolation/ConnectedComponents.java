@@ -1,19 +1,21 @@
+/**
+ * Class for connected components.
+ */
 public class ConnectedComponents {
-	
     /**
-     *  marked[v] = has vertex v been marked?
+     *  marked[v] = has vertex v been marked?.
      */
     private boolean[] marked;
     /**
-     * id[v] = id of connected component containing v
+     * id[v] = id of connected component containing v.
      */
     private int[] id;
     /**
-     * size[id] = number of vertices in given component     
+     * size[id] = number of vertices in given component.     
      */
     private int[] size;
     /**
-     * number of connected components
+     * number of connected components.
      */
     private int count;
 
@@ -35,7 +37,7 @@ public class ConnectedComponents {
     }
 
     /**
-     * depth-first search for a Graph
+     * depth-first search for a Graph.
      *
      * @param      graph1  The graph 1
      * @param      v       { parameter_description }
@@ -133,8 +135,8 @@ public class ConnectedComponents {
     private void validateVertex(final int v) {
         int v1 = marked.length;
         if (v < 0 || v >= v1) {
-            throw new IllegalArgumentException("vertex " +
-             v + " is not between 0 and " + (v1 - 1));
+            throw new IllegalArgumentException("vertex "
+            	+ v + " is not between 0 and " + (v1 - 1));
         }
     }
 }
