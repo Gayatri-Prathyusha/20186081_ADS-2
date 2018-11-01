@@ -1,71 +1,116 @@
 import java.util.Arrays;
-/**
- * Class for word net.
- */
+import java.util.*;
+
 public class WordNet {
+        private int vertices;
+        private String hypernyms;
+        private Digraph digraph;
+        private LinearProbingHashST<String, List<Integer>> st;
     /**
-     * Constructs the object.
+     * Constructs the Word Net object.
+     * parameters passed are the two files with the synsets and hypernyms.
      *
      * @param      synsets    The synsets
      * @param      hypernyms  The hypernyms
      */
-    public WordNet(String synsets, String hypernyms) {
-        parseMySynsetFile(synsets, hypernyms);
+    WordNet(String synsets, String hypernyms) {
+        vertices = readsyn(synsets);
+        
+        digraph = new Digraph(vertices);
+        readhyn(hypernyms);
+        st = new LinearProbingHashST<String, List<Integer>>();
     }
     /**
-     * parseMySynsetFile.
+     * reads the synsets file which is passed as a parameter.
      *
-     * @param      filename  The filename
+     * @param      file  The file
+     *
+     * @return     int.
      */
-    void parseMySynsetFile(String filename, String hypernyms) {
-        int id = 0;
-        int numOfVertices = 0;
-        try {
-            In inObj = new In(filename);
-            while (!inObj.isEmpty()) {
-                numOfVertices++;
-                String[] fileArray = inObj.readString().split(",");
-                id = Integer.parseInt(fileArray[0]);
-                String[] nounsArray = fileArray[1].split(" ");
+    public int readsyn(String file) {
+        In in = new In("./Files/" + file);
+        String[] s1 = null;
+        String[] s = null;
+        while (!in.isEmpty()) {
+        ArrayList<Integer> ids = new ArrayList<Integer>();
+            vertices++;
+        s = in.readString().split(",");
+        int id = Integer.parseInt(s[0]);
+        ids.add(id);
+        if (s[1].length() > 1) {
+        for (int i = 0; i < s[1].length(); i++) {
+            s1 = s[1].split(" ");
+            if (st.contains(s1[i])) {
+                ids.addAll(st.get(s[i]));
+                st.put(s[1], ids);
+            } else {
+            st.put(s1[i], ids);
             }
-            Digraph digraphObj = new Digraph(numOfVertices);
-            parseMyHypernymsFile(hypernyms, digraphObj);
-            //System.out.println(digraphObj);
-        } catch (Exception e) {
-            System.out.println("File not found");
+        } 
         }
     }
-
-
-    void parseMyHypernymsFile(String hypernyms, Digraph tempObj) {
-        try {
-            In inObj = new In(hypernyms);
-            while (!inObj.isEmpty()) {
-                String[] fileArray = inObj.readString().split(",");
-                int v = Integer.parseInt(fileArray[0]);
-                int w = Integer.parseInt(fileArray[1]);
-                tempObj.addEdge(v, w);
+    return vertices;
+}
+    /**
+     * reading the hypernyms and creates the graph.
+     *
+     * @param      file  The file
+     */
+    public void readhyn(String file)  {
+        In in = new In("./Files/" + file);
+        while(!in.isEmpty()) {
+            String[] s = in.readString().split(",");
+            for (int i = 1; i < s.length; i++) {
+                digraph.addEdge(Integer.parseInt(s[0]), Integer.parseInt(s[i]));
             }
-            System.out.println(tempObj);
-        } catch (Exception e) {
-
+        }
+        DirectedCycle dir = new DirectedCycle(digraph);
+        int count = 0;
+        for (int i = 0; i < vertices; i++) {
+            if (digraph.outdegree(i) == 0) {
+                count++;
+            }
+        }
+        if (count > 1) {
+            throw new IllegalArgumentException("Multiple roots");
+        }
+        if(dir.hasCycle()) {
+            throw new IllegalArgumentException("Cycle detected");
+        } else {
+        System.out.println(digraph);
         }
 
     }
-
-    // // returns all WordNet nouns
-    // public Iterable<String> nouns()
-
-    // // is the word a WordNet noun?
-    // public boolean isNoun(String word)
-
+    /**
+     * Nouns iterable.
+     *
+     * @return     String iterable.
+     */
+    public Iterable<String> nouns() {
+        return st.keys();
+    }
+    /**
+     * Determines if noun.
+     *
+     * @param      word  The word
+     *
+     * @return     True if noun, False otherwise.
+     */
+    public boolean isNoun(String word) {
+        return st.contains(word);
+    }
     // // distance between nounA and nounB (defined below)
-    // public int distance(String nounA, String nounB)
+    // public int distance(String nounA, String nounB) {
 
+    // }
     // // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
     // // in a shortest ancestral path (defined below)
-    // public String sap(String nounA, String nounB)
+    // public String sap(String nounA, String nounB) {
 
-    // // do unit testing of this class
-    // public static void main(String[] args)
+    // }
+
+    // do unit testing of this class
+    // public static void main(String[] args) {
+
+    // }
 }
