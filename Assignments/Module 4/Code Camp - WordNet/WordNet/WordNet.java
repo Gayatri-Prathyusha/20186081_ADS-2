@@ -1,68 +1,71 @@
 import java.util.Arrays;
+/**
+ * Class for word net.
+ */
 public class WordNet {
-    LinearProbingHashST<String, Integer> linearprobing;
-
-
-
-    // constructor takes the name of the two input files
+    /**
+     * Constructs the object.
+     *
+     * @param      synsets    The synsets
+     * @param      hypernyms  The hypernyms
+     */
     public WordNet(String synsets, String hypernyms) {
-        
-        //linearprobing = new LinearProbingHashST<String, Integer>();
-        readsynsets(synsets, hypernyms);
-        //readhypernyms(hypernyms);
-
-
+        parseMySynsetFile(synsets, hypernyms);
     }
-    public void readsynsets(String synsets1, String hypernyms1) {
-
-            int id = 0;
-            int vertices = 0;
-        try {            
-            In in = new In("./Files/" + synsets1);
-            String[] nouns = null;
-            while (!in.isEmpty()) {
-            String[] tokens = in.readString().split(",");
-            id = Integer.parseInt(tokens[0]);
-            nouns = tokens[1].split(" ");
-            //System.out.println(Arrays.toString(nouns));
-        }
-        Digraph digraph = new Digraph(vertices);
-        readHypernyms(hypernyms1, digraph);
-
-    } catch (Exception e) {
-        System.out.println("File not Found");
-    }
-}
-    void readHypernyms(String hypernyms1, Digraph digraph1) {
+    /**
+     * parseMySynsetFile.
+     *
+     * @param      filename  The filename
+     */
+    void parseMySynsetFile(String filename, String hypernyms) {
+        int id = 0;
+        int numOfVertices = 0;
         try {
-            In in = new In(hypernyms1);
-            while (!in.isEmpty()) {
-                String[] filearr = in.readString().split(",");
-                int v = Integer.parseInt(filearr[0]);
-                int w = Integer.parseInt(filearr[1]);
-                digraph1.addEdge(v, w);
+            In inObj = new In(filename);
+            while (!inObj.isEmpty()) {
+                numOfVertices++;
+                String[] fileArray = inObj.readString().split(",");
+                id = Integer.parseInt(fileArray[0]);
+                String[] nounsArray = fileArray[1].split(" ");
             }
-            System.out.println(digraph1);
+            Digraph digraphObj = new Digraph(numOfVertices);
+            parseMyHypernymsFile(hypernyms, digraphObj);
+            //System.out.println(digraphObj);
+        } catch (Exception e) {
+            System.out.println("File not found");
+        }
+    }
 
-    } catch(Exception e) {
+
+    void parseMyHypernymsFile(String hypernyms, Digraph tempObj) {
+        try {
+            In inObj = new In(hypernyms);
+            while (!inObj.isEmpty()) {
+                String[] fileArray = inObj.readString().split(",");
+                int v = Integer.parseInt(fileArray[0]);
+                int w = Integer.parseInt(fileArray[1]);
+                tempObj.addEdge(v, w);
+            }
+            System.out.println(tempObj);
+        } catch (Exception e) {
+
+        }
 
     }
-}
 
-    // returns all WordNet nouns
-    //public Iterable<String> nouns()
+    // // returns all WordNet nouns
+    // public Iterable<String> nouns()
 
-    // is the word a WordNet noun?
-    //public boolean isNoun(String word)
+    // // is the word a WordNet noun?
+    // public boolean isNoun(String word)
 
-    // distance between nounA and nounB (defined below)
-    //public int distance(String nounA, String nounB)
+    // // distance between nounA and nounB (defined below)
+    // public int distance(String nounA, String nounB)
 
-    // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
-    // in a shortest ancestral path (defined below)
-    //public String sap(String nounA, String nounB)
+    // // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
+    // // in a shortest ancestral path (defined below)
+    // public String sap(String nounA, String nounB)
 
-    // do unit testing of this class
-    //public static void main(String[] args) {
-    //}
+    // // do unit testing of this class
+    // public static void main(String[] args)
 }

@@ -496,26 +496,18 @@ Audit done.
 Checkstyle ends with 60 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:1:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:3:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:3:42: Variable 'linearprobing' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:8:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:8:20: Parameter synsets should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:8:36: Parameter hypernyms should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:9: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:16:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'readsynsets' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'readsynsets' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:16:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:16:29: Parameter synsets1 should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:16:46: Parameter hypernyms1 should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:20: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:36:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'readHypernyms' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'readHypernyms' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:36:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:36:24: Parameter hypernyms1 should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:36:43: Parameter digraph1 should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:47:12: 'catch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:61: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:12:20: Parameter synsets should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:12:36: Parameter hypernyms should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:20:28: Parameter filename should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:20:45: Parameter hypernyms should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:20:52: Expected @param tag for 'hypernyms'. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:40:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'parseMyHypernymsFile' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'parseMyHypernymsFile' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:40:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:40:31: Parameter hypernyms should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:40:49: Parameter tempObj should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:65: Line is longer than 80 characters (found 95). [LineLength]
 Audit done.
-Checkstyle ends with 19 errors.
+Checkstyle ends with 11 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Stack.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Stack.java:14: Line has trailing spaces. [RegexpSingleline]
