@@ -5,7 +5,7 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         /**
          * empty constructor.
          */

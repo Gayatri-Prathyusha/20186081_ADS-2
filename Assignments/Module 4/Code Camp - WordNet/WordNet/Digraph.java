@@ -4,40 +4,39 @@
  *  Dependencies: Bag.java In.java StdOut.java
  *  Data files:   https://algs4.cs.princeton.edu/42digraph/tinyDG.txt
  *                https://algs4.cs.princeton.edu/42digraph/mediumDG.txt
- *                https://algs4.cs.princeton.edu/42digraph/largeDG.txt  
+ *                https://algs4.cs.princeton.edu/42digraph/largeDG.txt
  *
  *  A graph, implemented using an array of lists.
  *  Parallel edges and self-loops are permitted.
  *
  *  % java Digraph tinyDG.txt
  *  13 vertices, 22 edges
- *  0: 5 1 
- *  1: 
- *  2: 0 3 
- *  3: 5 2 
- *  4: 3 2 
- *  5: 4 
- *  6: 9 4 8 0 
+ *  0: 5 1
+ *  1:
+ *  2: 0 3
+ *  3: 5 2
+ *  4: 3 2
+ *  5: 4
+ *  6: 9 4 8 0
  *  7: 6 9
- *  8: 6 
- *  9: 11 10 
- *  10: 12 
- *  11: 4 12 
- *  12: 9 
- *  
+ *  8: 6
+ *  9: 11 10
+ *  10: 12
+ *  11: 4 12
+ *  12: 9
+ * 
  ******************************************************************************/
-
-
 import java.util.NoSuchElementException;
 
 /**
  *  The {@code Digraph} class represents a directed graph of vertices
  *  named 0 through <em>V</em> - 1.
- *  It supports the following two primary operations: add an edge to the digraph,
+ *  It supports the following two primary operations:
+ *  add an edge to the digraph,
  *  iterate over all of the vertices adjacent from a given vertex.
  *  Parallel edges and self-loops are permitted.
  *  <p>
- *  This implementation uses an adjacency-lists representation, which 
+ *  This implementation uses an adjacency-lists representation, which
  *  is a vertex-indexed array of {@link Bag} objects.
  *  All operations take constant time (in the worst case) except
  *  iterating over the vertices adjacent from a given vertex, which takes
@@ -77,7 +76,6 @@ public class Digraph {
      * indegree[v] = indegree of vertex v.
      */
     private int[] indegree;
-    
     /**
      * Initializes an empty digraph with <em>V</em> vertices.
      *
@@ -123,8 +121,10 @@ public class Digraph {
                 adj[v] = new Bag<Integer>();
             }
             int edg3 = in.readInt();
-            if (edg3 < 0) throw new IllegalArgumentException(
+            if (edg3 < 0) {
+                throw new IllegalArgumentException(
                 "number of edges in a Digraph must be nonnegative");
+            }
             for (int i = 0; i < edg3; i++) {
                 int v = in.readInt();
                 int w = in.readInt();
@@ -135,12 +135,10 @@ public class Digraph {
                 "invalid input format in Digraph constructor", e);
         }
     }
-
     /**
      * Initializes a new digraph that is a
      * deep copy of the specified digraph.
-     *
-     * @param  G the digraph to copy
+     * @param  graph1 the digraph to copy
      */
     public Digraph(final Digraph graph1) {
         this(graph1.ver());
@@ -158,7 +156,7 @@ public class Digraph {
                 adj[v].add(w);
             }
         }
-    }   
+    }
     /**
      * Returns the number of vertices in this digraph.
      *
@@ -186,7 +184,6 @@ public class Digraph {
                 + v + " is not between 0 and " + (ver - 1));
         }
     }
-
     /**
      * Adds the directed edge v→w to this digraph.
      *
