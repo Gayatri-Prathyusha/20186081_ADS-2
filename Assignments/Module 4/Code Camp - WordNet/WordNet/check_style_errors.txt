@@ -1,13 +1,7 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Solution.java:4: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Digraph.java:27: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Digraph.java:85:30: 'ver' hides a field. [HiddenField]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Digraph.java:116: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/SAP.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/SAP.java:9: Line is longer than 80 characters (found 102). [LineLength]

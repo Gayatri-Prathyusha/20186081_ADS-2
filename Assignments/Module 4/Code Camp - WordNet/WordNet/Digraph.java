@@ -24,7 +24,6 @@
  *  10: 12
  *  11: 4 12
  *  12: 9
- * 
  ******************************************************************************/
 import java.util.NoSuchElementException;
 
@@ -79,19 +78,19 @@ public class Digraph {
     /**
      * Initializes an empty digraph with <em>V</em> vertices.
      *
-     * @param  ver the number of vertices
+     * @param  ver100 the number of vertices
      * @throws IllegalArgumentException if {@code V < 0}
      */
-    public Digraph(final int ver) {
-        if (ver < 0) {
+    public Digraph(final int ver100) {
+        if (ver100 < 0) {
             throw new IllegalArgumentException(
                 "Number of vertices in a Digraph must be nonnegative");
         }
-        this.ver = ver;
+        this.ver = ver100;
         this.edg = 0;
-        indegree = new int[ver];
-        adj = (Bag<Integer>[]) new Bag[ver];
-        for (int v = 0; v < ver; v++) {
+        indegree = new int[ver100];
+        adj = (Bag<Integer>[]) new Bag[ver100];
+        for (int v = 0; v < ver100; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
@@ -113,8 +112,10 @@ public class Digraph {
     public Digraph(final In in) {
         try {
             this.ver = in.readInt();
-            if (ver < 0) throw new IllegalArgumentException(
+            if (ver < 0) {
+                throw new IllegalArgumentException(
                 "number of vertices in a Digraph must be nonnegative");
+            }
             indegree = new int[ver];
             adj = (Bag<Integer>[]) new Bag[ver];
             for (int v = 0; v < ver; v++) {
