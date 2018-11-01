@@ -51,22 +51,44 @@ import java.util.NoSuchElementException;
  *  @author Kevin Wayne
  */
 
+/**
+ * Class for digraph.
+ */
 public class Digraph {
-    private static final String NEWLINE = System.getProperty("line.separator");
+    /**
+     * Newline.
+     */
+    private static final String NEWLINE = System.getProperty(
+        "line.separator");
 
-    private final int ver;           // number of vertices in this digraph
-    private int edg;                 // number of edges in this digraph
-    private Bag<Integer>[] adj;    // adj[v] = adjacency list for vertex v
-    private int[] indegree;        // indegree[v] = indegree of vertex v
+    /**
+     * number of vertices in this digraph.
+     */
+    private final int ver;
+    /**
+     * number of edges in this digraph.
+     */
+    private int edg;
+    /**
+     * adj[v] = adjacency list for vertex v.
+     */
+    private Bag<Integer>[] adj;
+    /**
+     * indegree[v] = indegree of vertex v.
+     */
+    private int[] indegree;
     
     /**
      * Initializes an empty digraph with <em>V</em> vertices.
      *
-     * @param  V the number of vertices
+     * @param  ver the number of vertices
      * @throws IllegalArgumentException if {@code V < 0}
      */
-    public Digraph(int ver) {
-        if (ver < 0) throw new IllegalArgumentException("Number of vertices in a Digraph must be nonnegative");
+    public Digraph(final int ver) {
+        if (ver < 0) {
+            throw new IllegalArgumentException(
+                "Number of vertices in a Digraph must be nonnegative");
+        }
         this.ver = ver;
         this.edg = 0;
         indegree = new int[ver];
@@ -75,62 +97,68 @@ public class Digraph {
             adj[v] = new Bag<Integer>();
         }
     }
-
-    /**  
+    /**
      * Initializes a digraph from the specified input stream.
      * The format is the number of vertices <em>V</em>,
      * followed by the number of edges <em>E</em>,
-     * followed by <em>E</em> pairs of vertices, with each entry separated by whitespace.
+     * followed by <em>E</em> pairs of vertices,
+     * with each entry separated by whitespace.
      *
      * @param  in the input stream
-     * @throws IllegalArgumentException if the endpoints of any edge are not in prescribed range
-     * @throws IllegalArgumentException if the number of vertices or edges is negative
-     * @throws IllegalArgumentException if the input stream is in the wrong format
+     * @throws IllegalArgumentException if
+     *  the endpoints of any edge are not in prescribed range
+     * @throws IllegalArgumentException if
+     *  the number of vertices or edges is negative
+     * @throws IllegalArgumentException if
+     * the input stream is in the wrong format
      */
-    public Digraph(In in) {
+    public Digraph(final In in) {
         try {
             this.ver = in.readInt();
-            if (ver < 0) throw new IllegalArgumentException("number of vertices in a Digraph must be nonnegative");
+            if (ver < 0) throw new IllegalArgumentException(
+                "number of vertices in a Digraph must be nonnegative");
             indegree = new int[ver];
             adj = (Bag<Integer>[]) new Bag[ver];
             for (int v = 0; v < ver; v++) {
                 adj[v] = new Bag<Integer>();
             }
-            int edg = in.readInt();
-            if (edg < 0) throw new IllegalArgumentException("number of edges in a Digraph must be nonnegative");
-            for (int i = 0; i < edg; i++) {
+            int edg3 = in.readInt();
+            if (edg3 < 0) throw new IllegalArgumentException(
+                "number of edges in a Digraph must be nonnegative");
+            for (int i = 0; i < edg3; i++) {
                 int v = in.readInt();
                 int w = in.readInt();
-                addEdge(v, w); 
+                addEdge(v, w);
             }
-        }
-        catch (NoSuchElementException e) {
-            throw new IllegalArgumentException("invalid input format in Digraph constructor", e);
+        } catch (NoSuchElementException e) {
+            throw new IllegalArgumentException(
+                "invalid input format in Digraph constructor", e);
         }
     }
 
     /**
-     * Initializes a new digraph that is a deep copy of the specified digraph.
+     * Initializes a new digraph that is a
+     * deep copy of the specified digraph.
      *
      * @param  G the digraph to copy
      */
-    public Digraph(Digraph G) {
-        this(G.ver());
-        this.edg = G.edg();
-        for (int v = 0; v < ver; v++)
-            this.indegree[v] = G.indegree(v);
-        for (int v = 0; v < G.ver(); v++) {
+    public Digraph(final Digraph graph1) {
+        this(graph1.ver());
+        this.edg = graph1.edg();
+        for (int v = 0; v < ver; v++) {
+            this.indegree[v] = graph1.indegree(v);
+        }
+        for (int v = 0; v < graph1.ver(); v++) {
             // reverse so that adjacency list is in same order as original
             Stack<Integer> reverse = new Stack<Integer>();
-            for (int w : G.adj[v]) {
+            for (int w : graph1.adj[v]) {
                 reverse.push(w);
             }
             for (int w : reverse) {
                 adj[v].add(w);
             }
         }
-    }
-        
+    }   
     /**
      * Returns the number of vertices in this digraph.
      *
@@ -139,7 +167,6 @@ public class Digraph {
     public int ver() {
         return ver;
     }
-
     /**
      * Returns the number of edges in this digraph.
      *
@@ -148,12 +175,16 @@ public class Digraph {
     public int edg() {
         return edg;
     }
-
-
-    // throw an IllegalArgumentException unless {@code 0 <= v < V}
-    private void validateVertex(int v) {
-        if (v < 0 || v >= ver)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (ver - 1));
+    /**
+     * throw an IllegalArgumentException unless {@code 0 <= v < V}.
+     *
+     * @param      v     { parameter_description }
+     */
+    private void validateVertex(final int v) {
+        if (v < 0 || v >= ver) {
+            throw new IllegalArgumentException("vertex "
+                + v + " is not between 0 and " + (ver - 1));
+        }
     }
 
     /**
@@ -161,9 +192,10 @@ public class Digraph {
      *
      * @param  v the tail vertex
      * @param  w the head vertex
-     * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
+     * @throws IllegalArgumentException unless both
+     * {@code 0 <= v < V} and {@code 0 <= w < V}
      */
-    public void addEdge(int v, int w) {
+    public void addEdge(final int v, final int w) {
         validateVertex(v);
         validateVertex(w);
         adj[v].add(w);
@@ -175,10 +207,11 @@ public class Digraph {
      * Returns the vertices adjacent from vertex {@code v} in this digraph.
      *
      * @param  v the vertex
-     * @return the vertices adjacent from vertex {@code v} in this digraph, as an iterable
+     * @return the vertices adjacent from
+     * vertex {@code v} in this digraph, as an iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public Iterable<Integer> adj(int v) {
+    public Iterable<Integer> adj(final int v) {
         validateVertex(v);
         return adj[v];
     }
@@ -188,23 +221,21 @@ public class Digraph {
      * This is known as the <em>outdegree</em> of vertex {@code v}.
      *
      * @param  v the vertex
-     * @return the outdegree of vertex {@code v}               
+     * @return the outdegree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public int outdegree(int v) {
+    public int outdegree(final int v) {
         validateVertex(v);
         return adj[v].size();
     }
-
     /**
      * Returns the number of directed edges incident to vertex {@code v}.
      * This is known as the <em>indegree</em> of vertex {@code v}.
-     *
      * @param  v the vertex
-     * @return the indegree of vertex {@code v}               
+     * @return the indegree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public int indegree(int v) {
+    public int indegree(final int v) {
         validateVertex(v);
         return indegree[v];
     }
@@ -223,12 +254,11 @@ public class Digraph {
         }
         return reverse;
     }
-
     /**
      * Returns a string representation of the graph.
-     *
-     * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,  
-     *         followed by the <em>V</em> adjacency lists
+     * @return the number of vertices <em>V</em>, followed
+     * by the number of edges <em>E</em>,
+     * followed by the <em>V</em> adjacency lists
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
