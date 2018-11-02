@@ -427,7 +427,10 @@ Starting audit...
 Audit done.
 Checkstyle ends with 60 errors.
 Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:31:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'getDigraph' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'getDigraph' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:31:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Stack.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Stack.java:14: Line has trailing spaces. [RegexpSingleline]

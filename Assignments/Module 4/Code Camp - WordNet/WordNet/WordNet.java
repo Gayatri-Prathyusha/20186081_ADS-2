@@ -27,6 +27,7 @@ public class WordNet {
      *
      * @return     The digraph.
      */
+    private int ver;
     public Digraph getDigraph() {
         return this.digraph;
     }
@@ -42,7 +43,9 @@ public class WordNet {
         try {
             In in = new In("./Files/" + synsets);
             int id = 0;
+            ver = 0;
             while (!in.isEmpty()) {
+                ver++;
                 String line = in.readLine();
                 assert !line.equals("");
                 String[] tokens = line.split(",");
@@ -65,7 +68,7 @@ public class WordNet {
             }
             //Hypernyms
             assert id != 1;
-            this.digraph = new Digraph(id + 1);
+            this.digraph = new Digraph(ver);
             in = new In("./Files/" + hypernyms);
             while (!in.isEmpty()) {
                 String line = in.readLine();
@@ -87,7 +90,13 @@ public class WordNet {
      */
     public void display() {
         DirectedCycle directedcycle = new DirectedCycle(digraph);
-        if (digraph.edg() > 1) {
+        int count = 0;
+        for (int i = 0; i < ver; i++) {
+            if (digraph.outdegree(i) == 0) {
+                count++;
+            }
+        }
+        if (count > 1) {
             throw new IllegalArgumentException("Multiple roots");
 
         } else if (directedcycle.hasCycle()) {
