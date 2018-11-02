@@ -10,7 +10,6 @@ public class SAP {
      * breadth first directed paths.
      */
     private BreadthFirstDirectedPaths[] bfs;
-
     /**
     * constructor takes a digraph (not necessarily a DAG).
     **/
@@ -137,10 +136,8 @@ public class SAP {
         if (v == null || w == null) {
             throw new NullPointerException();
         }
-
         int length = Integer.MAX_VALUE;
         int ancestor = -1;
-
         for (int i : v) {
             for (int j : w) {
                 int l = length(i, j);
