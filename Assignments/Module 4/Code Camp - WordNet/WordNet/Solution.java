@@ -42,6 +42,7 @@ public final class Solution {
                                                strarray[1]));
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 System.out.println(e.getMessage());
             }
             break;

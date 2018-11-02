@@ -43,6 +43,11 @@ distance = 10, ancestor = entity
 
 Your Output: 
 -4
+java.lang.NullPointerException
+	at Digraph.<init>(Digraph.java:145)
+	at SAP.<init>(SAP.java:17)
+	at WordNet.<init>(WordNet.java:85)
+	at Solution.main(Solution.java:31)
 null
 ----------------------------------------
 
@@ -57,6 +62,11 @@ distance = 1, ancestor = animal_oil
 
 Your Output: 
 -4
+java.lang.NullPointerException
+	at Digraph.<init>(Digraph.java:145)
+	at SAP.<init>(SAP.java:17)
+	at WordNet.<init>(WordNet.java:85)
+	at Solution.main(Solution.java:31)
 null
 ----------------------------------------
 
@@ -68,6 +78,11 @@ distance = 2, ancestor = wax
 
 Your Output: 
 -2
+java.lang.NullPointerException
+	at Digraph.<init>(Digraph.java:145)
+	at SAP.<init>(SAP.java:17)
+	at WordNet.<init>(WordNet.java:85)
+	at Solution.main(Solution.java:31)
 null
 ----------------------------------------
 
@@ -199,19 +214,23 @@ Your Output:
 Multiple roots
 ----------------------------------------
 
-########## Testcase 11: Passed ##########
+########## Testcase 11: Failed ##########
 Expected Output: 
 IllegalArgumentException
 
 Your Output: 
+java.lang.IllegalArgumentException: IllegalArgumentException
+	at Solution.main(Solution.java:37)
 IllegalArgumentException
 ----------------------------------------
 
-########## Testcase 12: Passed ##########
+########## Testcase 12: Failed ##########
 Expected Output: 
 IllegalArgumentException
 
 Your Output: 
+java.lang.IllegalArgumentException: IllegalArgumentException
+	at Solution.main(Solution.java:37)
 IllegalArgumentException
 ----------------------------------------
 
@@ -237,6 +256,11 @@ distance = 8, ancestor = abstraction abstract_entity
 
 Your Output: 
 -14
+java.lang.NullPointerException
+	at Digraph.<init>(Digraph.java:145)
+	at SAP.<init>(SAP.java:17)
+	at WordNet.<init>(WordNet.java:85)
+	at Solution.main(Solution.java:31)
 null
 ----------------------------------------
 
