@@ -89,11 +89,11 @@ public class WordNet {
         DirectedCycle directedcycle = new DirectedCycle(digraph);
         if (digraph.edg() > 1) {
             throw new IllegalArgumentException("Multiple roots");
-            
+
         } else if (directedcycle.hasCycle()) {
             throw new IllegalArgumentException("Cycle detected");
         } else {
-            System.out.println(digraph.toString());
+            System.out.println(digraph);
         }
     }
     /**

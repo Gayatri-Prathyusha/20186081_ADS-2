@@ -427,9 +427,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 60 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/WordNet.java:92: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Stack.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 4/Code Camp - WordNet/WordNet/Stack.java:14: Line has trailing spaces. [RegexpSingleline]
