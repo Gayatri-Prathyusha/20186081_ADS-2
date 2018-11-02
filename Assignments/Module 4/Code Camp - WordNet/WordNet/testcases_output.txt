@@ -217,11 +217,11 @@ Your Output:
 null
 ----------------------------------------
 
-########## Testcase 14: Passed ##########
+########## Testcase 14: Failed ##########
 Expected Output: 
 Cycle detected
 
 Your Output: 
-Cycle detected
+Multiple roots
 ----------------------------------------
 
