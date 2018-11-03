@@ -24,7 +24,6 @@ class PageRank {
       for (int j = 0; j < THOUS; j++) {
           
         for (int k : gra1.adj(i)) {
-            // System.out.println(i + ">" + k);
           count += 1;
           if (gra.outdegree(i) != 0) {
             tempPageRank = (double) tempPageRank / gra.outdegree(k);
@@ -34,10 +33,11 @@ class PageRank {
           }
         }
 
-      if (count != 0) {
-        pr[i] = tempPageRank;   
-      } else {
+      if (count == 0) {
         pr[i] = 0.0;
+      } else {
+      	pr[i] = tempPageRank;
+
       }
       
     }
