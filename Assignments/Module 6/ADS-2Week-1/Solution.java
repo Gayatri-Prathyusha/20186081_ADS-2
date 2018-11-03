@@ -89,7 +89,8 @@ public class Solution {
 			}
 			System.out.println();
 		}
-		
+	    System.out.println();
+
 		// Create page rank object and pass the graph object to the constructor
 		PageRank pr = new PageRank(digraph);		
 		// print the page rank object

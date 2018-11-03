@@ -30,16 +30,15 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:83:65: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:85:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:87:28: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:92: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:93: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:94: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:99: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:102: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:104: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:105: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:110: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:94: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:95: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:100: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:103: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:105: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:106: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 6/ADS-2Week-1/Solution.java:111: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 39 errors.
+Checkstyle ends with 38 errors.
 Starting audit...
 Audit done.
 Starting audit...
