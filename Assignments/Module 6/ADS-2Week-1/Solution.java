@@ -6,7 +6,7 @@ class PageRank {
 
   double[] pr;
 
-  private final static int THOUS = 1000;
+  private final static int THOUSAND = 1000;
 
   PageRank(Digraph g) {
 
@@ -21,23 +21,22 @@ class PageRank {
 
       double tempPageRank = (double) 1 / gra.ver();
       int count = 0;
-      for (int j = 0; j < THOUS; j++) {
+      for (int j = 0; j < THOUSAND; j++) {
           
         for (int k : gra1.adj(i)) {
           count += 1;
           if (gra.outdegree(i) != 0) {
-            tempPageRank = (double) tempPageRank / gra.outdegree(k);
+            tempPageRank = (double)( tempPageRank / gra.outdegree(k));
             } else {
-              tempPageRank = (double) tempPageRank / (gra.ver() - 1);
+              tempPageRank = (double) (tempPageRank / (gra.ver() - 1));
             }
           }
         }
 
-      if (count == 0) {
-        pr[i] = 0.0;
+      if (count != 0) {
+        pr[i] = tempPageRank;
       } else {
-      	pr[i] = tempPageRank;
-
+        pr[i] = 0.0;
       }
       
     }
