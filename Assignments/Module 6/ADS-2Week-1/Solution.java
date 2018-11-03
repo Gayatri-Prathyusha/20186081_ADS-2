@@ -8,6 +8,11 @@ class PageRank {
 
   private final static int THOUSAND = 1000;
 
+  /**
+   * Constructs the object.
+   *
+   * @param      g     digraph.
+   */
   PageRank(Digraph g) {
 
     pr = new double[g.ver()];
@@ -15,7 +20,12 @@ class PageRank {
     calculatePR(g);
   }
 
-  public void calculatePR(Digraph gra) {    
+  /**
+   * Calculates the page rank.
+   *
+   * @param      gra   The digraph
+   */
+  public void calculatePR(final Digraph gra) {    
     Digraph gra1 = gra.reverse();
     for (int i = 0; i < gra.ver(); i++) {
 
@@ -44,10 +54,22 @@ class PageRank {
     // return tempPageRank
   }
 
-  public double getPR(int i) {
+  /**
+   * Gets the pr.
+   *
+   * @param      i     { parameter_description }
+   *
+   * @return     The pr.
+   */
+  public double getPR(final int i) {
     return pr[i];
   }
 
+  /**
+   * Returns a string representation of the object.
+   *
+   * @return     String representation of the object.
+   */
   public String toString() {
     String s = "";
     for (int i = 0; i < pr.length; i++) {
@@ -62,8 +84,16 @@ class WebSearch {
 }
 
 
-public class Solution {
-  public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+public final class Solution {
+  /**
+   * { function_description }
+   *
+   * @param      args  The arguments
+   */
+  public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);		
 		int vertices = Integer.parseInt(scan.nextLine());
 		// iterate count of vertices times 
