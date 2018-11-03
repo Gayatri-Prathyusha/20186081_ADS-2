@@ -1,160 +1,210 @@
-/******************************************************************************
+/*************************************************************************
  *  Compilation:  javac Queue.java
  *  Execution:    java Queue < input.txt
- *  Dependencies: StdIn.java StdOut.java
- *  Data files:   https://algs4.cs.princeton.edu/13stacks/tobe.txt  
+ *  Data files:   http://algs4.cs.princeton.edu/13stacks/tobe.txt
  *
  *  A generic queue, implemented using a linked list.
  *
- *  % java Queue < tobe.txt 
+ *  % java Queue < tobe.txt
  *  to be or not to be (2 left on queue)
  *
- ******************************************************************************/
+ *************************************************************************/
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- *  The {@code Queue} class represents a first-in-first-out (FIFO)
+ *  The <tt>Queue</tt> class represents a first-in-first-out (FIFO)
  *  queue of generic items.
  *  It supports the usual <em>enqueue</em> and <em>dequeue</em>
- *  operations, along with methods for peeking at the first item,
+ *  operations, along with methods for peeking at the top item,
  *  testing if the queue is empty, and iterating through
  *  the items in FIFO order.
  *  <p>
- *  This implementation uses a singly linked list with a static nested class for
- *  linked-list nodes. See {@link LinkedQueue} for the version from the
- *  textbook that uses a non-static nested class.
- *  See {@link ResizingArrayQueue} for a version that uses a resizing array.
- *  The <em>enqueue</em>, <em>dequeue</em>, <em>peek</em>, <em>size</em>, and <em>is-empty</em>
- *  operations all take constant time in the worst case.
+ *  All queue operations except iteration are constant time.
  *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
+ *  For additional documentation,
+ *  see <a href="http://algs4.cs.princeton.edu/13stacks">
+ *  Section 1.3</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
+ */
+/**
+ * List of .
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- *
- *  @param <Item> the generic type of an item in this queue
+ * @param      <Item>  The item
  */
 public class Queue<Item> implements Iterable<Item> {
-    private Node<Item> first;    // beginning of queue
-    private Node<Item> last;     // end of queue
-    private int n;               // number of elements on queue
-
-    // helper linked list class
-    private static class Node<Item> {
-        private Item item;
-        private Node<Item> next;
-    }
+    /**
+     * number of elements on queue.
+     */
+    private int no;
+    /**
+     * beginning of queue.
+     */
+    private Node first;
+    /**
+     * end of queue.
+     */
+    private Node last;
 
     /**
-     * Initializes an empty queue.
+     * Class for node.
+     * helper linked list class
+     */
+    private class Node {
+        /**
+         * item.
+         */
+        private Item item;
+        /**
+         * next.
+         */
+        private Node next;
+    }
+    /**
+     * Constructs the object.
+     * Create an empty queue.
      */
     public Queue() {
         first = null;
         last  = null;
-        n = 0;
     }
-
     /**
-     * Returns true if this queue is empty.
+     * Determines if empty.
+     * Is the queue empty?
      *
-     * @return {@code true} if this queue is empty; {@code false} otherwise
+     * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
         return first == null;
     }
-
     /**
-     * Returns the number of items in this queue.
+     * Return the number of items in the queue.
      *
-     * @return the number of items in this queue
+     * @return     int.
      */
     public int size() {
-        return n;
+        return no;
     }
-
     /**
-     * Returns the item least recently added to this queue.
+     * Return the item least recently added to the queue.
+     * Throw an exception if the queue is empty.
      *
-     * @return the item least recently added to this queue
-     * @throws NoSuchElementException if this queue is empty
+     * @return     Item.
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        if (isEmpty()) {
+            throw new RuntimeException("Queue underflow");
+        }
         return first.item;
     }
-
     /**
-     * Adds the item to this queue.
+     * Add the item to the queue.
      *
-     * @param  item the item to add
+     * @param      item  The item
      */
-    public void enqueue(Item item) {
-        Node<Item> oldlast = last;
-        last = new Node<Item>();
-        last.item = item;
-        last.next = null;
-        if (isEmpty()) first = last;
-        else           oldlast.next = last;
-        n++;
+    public void enqueue(final Item item) {
+        Node x = new Node();
+        x.item = item;
+        if (isEmpty()) {
+            first = x;
+            last = x;
+        } else {
+            last.next = x;
+            last = x;
+        }
+        no++;
     }
-
     /**
-     * Removes and returns the item on this queue that was least recently added.
+     * Remove and return the item on the queue least recently added.
+     * Throw an exception if the queue is empty.
      *
-     * @return the item on this queue that was least recently added
-     * @throws NoSuchElementException if this queue is empty
+     * @return     Item.
      */
     public Item dequeue() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        if (isEmpty()) {
+            throw new RuntimeException("Queue underflow");
+        }
         Item item = first.item;
         first = first.next;
-        n--;
-        if (isEmpty()) last = null;   // to avoid loitering
+        no--;
+        if (isEmpty()) {
+            last = null;   // to avoid loitering
+        }
         return item;
     }
-
     /**
-     * Returns a string representation of this queue.
+     * Returns a string representation of the object.
      *
-     * @return the sequence of items in FIFO order, separated by spaces
+     * @return     String representation of the object.
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (Item item : this) {
-            s.append(item);
-            s.append(' ');
+            s.append(item + " ");
         }
         return s.toString();
-    } 
-
+    }
     /**
-     * Returns an iterator that iterates over the items in this queue in FIFO order.
+     * Return an iterator that iterates over the
+     * items on the queue in FIFO order.
      *
-     * @return an iterator that iterates over the items in this queue in FIFO order
+     * @return     List Iterable.
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+        return new ListIterator();
     }
+    /**
+     * an iterator, doesn't implement remove() since it's optional.
+     * Class for list iterator.
+     */
+    private class ListIterator implements Iterator<Item> {
+        /**
+         * current node.
+         */
+        private Node current = first;
 
-    // an iterator, doesn't implement remove() since it's optional
-    private class ListIterator<Item> implements Iterator<Item> {
-        private Node<Item> current;
-
-        public ListIterator(Node<Item> first) {
-            current = first;
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext() {
+            return current != null;
+        }
+        /**
+         * remove method.
+         */
+        public void remove() {
+            throw new UnsupportedOperationException();
         }
 
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
+        /**
+         * next method.
+         *
+         * @return     { description_of_the_return_value }
+         */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
+
+
+   /**
+     * A test client.
+     */
+/*    public static void main(String[] args) {
+        Queue<String> q = new Queue<String>();
+        while (!StdIn.isEmpty()) {
+            String item = StdIn.readString();
+            if (!item.equals("-")) q.enqueue(item);
+            else if (!q.isEmpty()) StdOut.print(q.dequeue() + " ");
+        }
+        StdOut.println("(" + q.size() + " left on queue)");
+    }*/
 }
