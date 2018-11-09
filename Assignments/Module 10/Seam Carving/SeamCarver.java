@@ -2,8 +2,6 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 public class SeamCarver {
 	private Picture picture;
-	
-    private Picture pic; 
     private double[] energy; 
     private int[] pathTo; 
 	// create a seam carver object based on the given picture
@@ -99,7 +97,7 @@ public class SeamCarver {
             energy[i] += energy[pathTo[i]]; i++; 
             for (int c = 1; c < w - 1; c++, i++) { 
                 if (energy[i - w - 1] <= energy[i - w]) { 
-                    if (energy[i-w-1] <= energy[i-w+1]) pathTo[i] = i-w-1; 
+                    if (energy[i - w - 1] <= energy[i - w+1]) pathTo[i] = i-w-1; 
                     else pathTo[i] = i-w+1; 
                 } else { 
                     if (energy[i-w] <= energy[i-w+1]) pathTo[i] = i-w; 
@@ -160,11 +158,11 @@ public class SeamCarver {
             prerow = a[c]; 
             for (int r = 0; r < height()-1; r++) 
                 if (r < a[c]) 
-                    p.set(c, r, pic.get(c, r)); 
+                    p.set(c, r, picture.get(c, r)); 
                 else 
-                    p.set(c, r, pic.get(c, r+1)); 
+                    p.set(c, r, picture.get(c, r+1)); 
         } 
-        pic = p; 
+        picture = p; 
         energy = null; 
         pathTo = null; 
         //seamPic.show(); 
@@ -189,13 +187,12 @@ public class SeamCarver {
             precol = a[r]; 
             for (int c = 0; c < width()-1; c++) 
                 if (c < a[r]) 
-                    p.set(c, r, pic.get(c, r)); 
+                    p.set(c, r, picture.get(c, r)); 
                 else 
-                    p.set(c, r, pic.get(c+1, r)); 
+                    p.set(c, r, picture.get(c+1, r)); 
         } 
-        pic = p; 
-        energy = null; 
-        pathTo = null; 
-        //seamPic.show(); 
+        picture = p; 
+       // energy = null; 
+        //pathTo = null; 
     }
 }
