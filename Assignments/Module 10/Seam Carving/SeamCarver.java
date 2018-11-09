@@ -1,44 +1,68 @@
+import java.awt.Color;
+import java.awt.image.BufferedImage;
 public class SeamCarver {
- 
+	private Picture picture;
+	
     private Picture pic; 
     private double[] energy; 
     private int[] pathTo; 
- 
-    public SeamCarver(Picture picture) { 
-        pic = new Picture(picture); 
-    } 
- 
-    // current picture 
-    public Picture picture() { 
-        return new Picture(pic); 
-    } 
- 
-    // width of current picture 
-    public     int width() { 
-        return pic.width(); 
-    } 
- 
-    // height of current picture 
-    public     int height() { 
-        return pic.height(); 
-    } 
-     
+	// create a seam carver object based on the given picture
+	public SeamCarver(Picture picture) {
+		if(picture == null) {
+			throw new IllegalArgumentException("picture is null");
+		}
+		this.picture = picture;
+
+	}
+	// current picture
+	public Picture picture() {
+		return picture;
+	}
+	// width of current picture
+	public int width() {
+		return picture.width();
+	}
+
+	// height of current picture
+	public int height() {
+		return picture.height();
+	}
+
+	// energy of pixel at column x and row y
+	public double energy(int x, int y) {
+		if (x == 0 || y == 0 || picture.width() - 1 == x || picture.height() - 1 == y) {
+			return 1000;
+		}
+		Color top = picture.get(x, y - 1);
+		Color bottom = picture.get(x, y + 1);
+		Color left = picture.get(x - 1, y);
+		Color right = picture.get(x + 1, y);
+		int red = right.getRed() - left.getRed();
+		int blue = right.getBlue() - left.getBlue();
+		int green = right.getGreen() - left.getGreen();
+		int horizontal = red * red + blue * blue + green * green;
+		int redv = top.getRed() - bottom.getRed();
+		int bluev = top.getBlue() - bottom.getBlue();
+		int greenv = top.getGreen() - bottom.getGreen();
+		int vertical = redv * redv + bluev * bluev + greenv * greenv;
+		double energy = Math.sqrt(horizontal + vertical);
+		return energy;
+	}
+	public static double getMinValue(double[] numbers){  
+		double minValue = numbers[0];
+		for(int i=0;i<numbers.length;i++){  
+			if(numbers[i] < minValue){  
+				minValue = numbers[i];
+			}  
+		}
+		return minValue;  
+	}
     private double gradient(java.awt.Color x, java.awt.Color y) { 
         double r = x.getRed() - y.getRed(); 
         double g = x.getGreen() - y.getGreen(); 
         double b = x.getBlue() - y.getBlue(); 
         return r*r + g*g + b*b; 
     } 
- 
-    // energy of pixel at column x and row y 
-    public double energy(int x, int y) { 
-        if (x < 0 || x >= width() || y < 0 || y >= height()) 
-            throw new IndexOutOfBoundsException(); 
-        if (x == 0 || y == 0 || x == width()-1 || y == height()-1) 
-            return 195075; 
-        return gradient(pic.get(x-1, y), pic.get(x+1, y)) + gradient(pic.get(x, y-1), pic.get(x, y+1)); 
-    } 
- 
     private double energy(int x, int y, int flag) { 
         if (flag == 1) 
             return energy(y, x); 
@@ -48,10 +72,10 @@ public class SeamCarver {
  
     private void computeEnergy(int w, int h, int flag) { 
         //double maxE = 0; 
-        energy = new double[w*h]; 
+        energy = new double[w * h]; 
         for (int r = 0; r < h; r++) 
             for (int c = 0; c < w; c++) { 
-                energy[r*w + c] = energy(c, r, flag); 
+                energy[r * w + c] = energy(c, r, flag); 
                 //maxE = Math.max(maxE, energy[r*w + c]); 
             } 
         /*
@@ -66,15 +90,15 @@ public class SeamCarver {
     } 
  
     private int[] computePath(int w, int h) { 
-        pathTo = new int[w*h]; 
+        pathTo = new int[w * h]; 
         for (int i = 0; i < w; i++) 
             pathTo[i] = -1; 
         for (int r = 1, i = w; r < h; r++) { 
-            if (energy[i-w] <= energy[i-w+1]) pathTo[i] = i-w; 
-            else pathTo[i] = i-w+1; 
+            if (energy[i - w] <= energy[i - w + 1]) pathTo[i] = i - w; 
+            else pathTo[i] = i - w + 1; 
             energy[i] += energy[pathTo[i]]; i++; 
-            for (int c = 1; c < w-1; c++, i++) { 
-                if (energy[i-w-1] <= energy[i-w]) { 
+            for (int c = 1; c < w - 1; c++, i++) { 
+                if (energy[i - w - 1] <= energy[i - w]) { 
                     if (energy[i-w-1] <= energy[i-w+1]) pathTo[i] = i-w-1; 
                     else pathTo[i] = i-w+1; 
                 } else { 
