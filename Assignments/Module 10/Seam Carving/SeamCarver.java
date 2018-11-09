@@ -70,7 +70,7 @@ public class SeamCarver {
             return energy(x, y); 
     } 
  
-    private void computeEnergy(int w, int h, int flag) { 
+    private void getEnergies(int w, int h, int flag) { 
         //double maxE = 0; 
         energy = new double[w*h]; 
         for (int r = 0; r < h; r++) 
@@ -130,14 +130,14 @@ public class SeamCarver {
     // sequence of indices for horizontal seam 
     public   int[] findHorizontalSeam() { 
         int w = height(), h = width(); 
-        computeEnergy(w, h, 1); 
+        getEnergies(w, h, 1); 
         return computePath(w, h); 
     } 
  
     // sequence of indices for vertical seam 
     public   int[] findVerticalSeam() { 
         int w = width(), h = height(); 
-        computeEnergy(w, h, 0); 
+        getEnergies(w, h, 0); 
         return computePath(w, h); 
     } 
  
