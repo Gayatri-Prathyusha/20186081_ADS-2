@@ -68,26 +68,16 @@ public class SeamCarver {
             return energy(x, y); 
     } 
  
-    private void computeEnergy(int w, int h, int flag) { 
+    private void getEnergies(int w, int h, int flag) { 
         //double maxE = 0; 
         energy = new double[w * h]; 
         for (int r = 0; r < h; r++) 
             for (int c = 0; c < w; c++) { 
                 energy[r * w + c] = energy(c, r, flag); 
-                //maxE = Math.max(maxE, energy[r*w + c]); 
-            } 
-        /*
-        Picture energyPic = new Picture(w, h); 
-        for (int r = 0; r < h; r++) 
-            for (int c = 0; c < w; c++) { 
-                float color = (float)(energy[r*w + c] / maxE); 
-                energyPic.set(c, r, new java.awt.Color(color, color, color)); 
-            } 
-        energyPic.show(); 
-        */ 
+            }  
     } 
  
-    private int[] computePath(int w, int h) { 
+    private int[] findingthePath(int w, int h) { 
         pathTo = new int[w * h]; 
         for (int i = 0; i < w; i++) 
             pathTo[i] = -1; 
@@ -110,7 +100,7 @@ public class SeamCarver {
             energy[i] += energy[pathTo[i]]; i++; 
         } 
  
-        int pathEnd = w*(h-1); 
+        int pathEnd = w * (h-1); 
         double minE = energy[w*(h-1)]; 
         for (int i = w*(h-1); i < w*h; i++) { 
             if (minE > energy[i]) { 
@@ -122,21 +112,22 @@ public class SeamCarver {
         int[] path = new int[h]; 
         for (int p = pathEnd; p >= 0; p = pathTo[p]) 
             path[p/w] = p % w; 
+        path[0] = path[1];
         return path; 
     } 
  
     // sequence of indices for horizontal seam 
     public   int[] findHorizontalSeam() { 
         int w = height(), h = width(); 
-        computeEnergy(w, h, 1); 
-        return computePath(w, h); 
+        getEnergies(w, h, 1); 
+        return findingthePath(w, h); 
     } 
  
     // sequence of indices for vertical seam 
     public   int[] findVerticalSeam() { 
         int w = width(), h = height(); 
-        computeEnergy(w, h, 0); 
-        return computePath(w, h); 
+        getEnergies(w, h, 0); 
+        return findingthePath(w, h); 
     } 
  
     // remove horizontal seam from picture 
@@ -163,9 +154,8 @@ public class SeamCarver {
                     p.set(c, r, picture.get(c, r+1)); 
         } 
         picture = p; 
-        energy = null; 
-        pathTo = null; 
-        //seamPic.show(); 
+        //energy = null; 
+        //pathTo = null; 
     } 
  
     // remove vertical seam from picture 
