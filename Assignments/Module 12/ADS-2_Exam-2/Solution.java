@@ -48,7 +48,8 @@ public final class Solution {
       String[] inputarray = scan.nextLine().split(" ");
       int source = Integer.parseInt(inputarray[0]);
       int destination = Integer.parseInt(inputarray[1]);
-      DijkstraUndirectedSP dijkstrasp = new DijkstraUndirectedSP(edgeweightedgraph, source);
+      DijkstraUndirectedSP dijkstrasp = new DijkstraUndirectedSP(
+      	edgeweightedgraph, source);
       if (dijkstrasp.hasPathTo(destination)) {
         System.out.println(dijkstrasp.distTo(destination));
       } else {
@@ -65,6 +66,19 @@ public final class Solution {
       // third is the destination.
       // If the path exists print the distance between them.
       // Other wise print "No Path Found."
+      String[] inputarray1 = scan.nextLine().split(" ");
+      int source1 = Integer.parseInt(inputarray1[0]);
+      int via = Integer.parseInt(inputarray1[1]);
+      int destination1 = Integer.parseInt(inputarray1[2]);
+      DijkstraUndirectedSP dijkstrausp1 = new DijkstraUndirectedSP(
+      	edgeweightedgraph, source1);
+      if (dijkstrausp1.hasPathTo(destination1)) {
+        for (Edge onPath: dijkstrausp1.pathTo(destination1)) {
+          System.out.println(onPath);
+        }
+      } else {
+        System.out.println("No Path Found.");
+      }
       break;
 
     default:
