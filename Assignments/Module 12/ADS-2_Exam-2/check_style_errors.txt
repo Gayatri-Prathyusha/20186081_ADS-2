@@ -1,8 +1,7 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:6: Class Solution should be declared as final. [FinalClass]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:52: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:53: Line is longer than 80 characters (found 92). [LineLength]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
