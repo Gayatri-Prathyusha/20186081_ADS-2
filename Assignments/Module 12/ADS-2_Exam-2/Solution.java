@@ -73,9 +73,8 @@ public final class Solution {
       DijkstraUndirectedSP dijkstrausp1 = new DijkstraUndirectedSP(
       	edgeweightedgraph, source1);
       if (dijkstrausp1.hasPathTo(destination1)) {
-        for (Edge onPath: dijkstrausp1.pathTo(destination1)) {
-          System.out.println(onPath);
-        }
+      	System.out.println(dijkstrausp1.distTo(destination1));
+        System.out.println(dijkstrausp1.pathTo(destination1));
       } else {
         System.out.println("No Path Found.");
       }
