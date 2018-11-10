@@ -166,7 +166,7 @@ class EdgeWeightedGraph {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(vs + " " + es + NEWLINE);
+        s.append(vs + " vertices" + es + "edges" + NEWLINE);
         for (int v = 0; v < vs; v++) {
             s.append(v + ": ");
             for (Edge e : adj[v]) {
