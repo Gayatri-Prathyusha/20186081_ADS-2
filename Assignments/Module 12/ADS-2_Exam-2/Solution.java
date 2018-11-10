@@ -79,12 +79,12 @@ public final class Solution {
       	int i = 0;
       	System.out.println(dijkstrausp1.distTo(via)
       	 + dijkstrausp2.distTo(destination1));
-      	for (Edge e : dijkstrausp1.pathTo(via) ) {
+      	for (Integer e : dijkstrausp1.pathTo(via) ) {
       		s += e + " ";	
       	}
-      	for (Edge e : dijkstrausp2.pathTo(destination1)) {
+      	for (Integer e : dijkstrausp2.pathTo(destination1)) {
       		if (i != 0) {
-      			s += e + " ";	
+      			s += e + " ";
       		}
       		i += 1;
       	}

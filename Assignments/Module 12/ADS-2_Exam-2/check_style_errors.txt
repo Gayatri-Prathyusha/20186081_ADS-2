@@ -1,14 +1,11 @@
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:52:7: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:82:47: ')' is preceded with whitespace. [ParenPad]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:82:50: ')' is preceded with whitespace. [ParenPad]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:83: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/Solution.java:87: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 12/ADS-2_Exam-2/DijkstraUndirectedSP.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...

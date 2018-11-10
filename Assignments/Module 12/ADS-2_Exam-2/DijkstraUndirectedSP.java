@@ -18,6 +18,7 @@ public class DijkstraUndirectedSP {
     /**
      * Computes a shortest-paths tree from the source vertex {@code s} to every
      * other vertex in the edge-weighted graph {@code G}.
+     * Complexity: O(E + V)
      *
      * @param  graph the edge-weighted digraph
      * @param  s the source vertex
@@ -56,6 +57,7 @@ public class DijkstraUndirectedSP {
 
     /**
      * relax edge e and update pq if changed.
+     * Complexity: O(1)
      *
      * @param      e     { parameter_description }
      * @param      v     { parameter_description }
@@ -77,6 +79,7 @@ public class DijkstraUndirectedSP {
      * Returns the length of a shortest path between
      * the source vertex {@code s} and
      * vertex {@code v}.
+     * Complexity: O(1)
      *
      * @param  v the destination vertex
      * @return the length of a shortest path
@@ -92,6 +95,7 @@ public class DijkstraUndirectedSP {
     /**
      * Returns true if there is a path between the source vertex {@code s} and
      * vertex {@code v}.
+     * Complexity: O(1)
      *
      * @param  v the destination vertex
      * @return {@code true} if there is a path between the source vertex
@@ -105,6 +109,7 @@ public class DijkstraUndirectedSP {
     /**
      * Returns a shortest path between the source vertex {@code s}
      * and vertex {@code v}.
+     * Complexity: O(E) in worst case.
      *
      * @param  v the destination vertex
      * @return a shortest path between the source vertex {@code s}
@@ -112,14 +117,15 @@ public class DijkstraUndirectedSP {
      *         {@code null} if no such path
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public Iterable<Edge> pathTo(final int v) {
+    public Iterable<Integer> pathTo(final int v) {
         if (!hasPathTo(v)) {
             return null;
         }
-        Stack<Edge> path = new Stack<Edge>();
+        Stack<Integer> path = new Stack<Integer>();
         int x = v;
+        path.push(x);
         for (Edge e = edgeTo[v]; e != null; e = edgeTo[x]) {
-            path.push(e);
+            path.push(e.other(x));
             x = e.other(x);
         }
         return path;
