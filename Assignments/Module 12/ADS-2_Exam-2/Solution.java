@@ -72,9 +72,24 @@ public final class Solution {
       int destination1 = Integer.parseInt(inputarray1[2]);
       DijkstraUndirectedSP dijkstrausp1 = new DijkstraUndirectedSP(
       	edgeweightedgraph, source1);
+      DijkstraUndirectedSP dijkstrausp2 = new DijkstraUndirectedSP(
+      	edgeweightedgraph, via);
+      String s = "";
       if (dijkstrausp1.hasPathTo(destination1)) {
-      	System.out.println(dijkstrausp1.distTo(destination1));
-        System.out.println(dijkstrausp1.pathTo(destination1));
+      	int i = 0;
+      	System.out.println(dijkstrausp1.distTo(via)
+      	 + dijkstrausp2.distTo(destination1));
+      	for (Edge e : dijkstrausp1.pathTo(via) ) {
+      		s += e + " ";	
+      	}
+      	for (Edge e : dijkstrausp2.pathTo(destination1)) {
+      		if (i != 0) {
+      			s += e + " ";	
+      		}
+      		i += 1;
+      	}
+      	System.out.println(s.substring(0, s.length() - 1));
+
       } else {
         System.out.println("No Path Found.");
       }
