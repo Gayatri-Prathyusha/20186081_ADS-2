@@ -45,7 +45,17 @@ public final class Solution {
       // First is the source and second is the destination.
       // If the path exists print the distance between them.
       // Other wise print "No Path Found."
+      String[] inputarray = scan.nextLine().split(" ");
+      int source = Integer.parseInt(inputarray[0]);
+      int destination = Integer.parseInt(inputarray[1]);
+      DijkstraUndirectedSP dijkstrasp = new DijkstraUndirectedSP(edgeweightedgraph, source);
+      if (dijkstrasp.hasPathTo(destination)) {
+        System.out.println(dijkstrasp.distTo(destination));
+      } else {
+        System.out.println("No Path Found.");
+      }
       break;
+
 
     case "ViaPaths":
       // Handle the case of ViaPaths, where three integers are
