@@ -20,9 +20,10 @@ public class Solution {
     // Parallel Edges are allowed...
     // Take the Graph input here...
     Scanner scan = new Scanner(System.in);
+
     int n = Integer.parseInt(scan.nextLine());
     int k = Integer.parseInt(scan.nextLine());
-    EdgeWeightedGraph edgeweightgraph = new EdgeWeightedGraph(n);
+    EdgeWeightedGraph edgeweightedgraph = new EdgeWeightedGraph(n);
 
     for (int i = 0; i < k; i++) {
       String[] inputs = scan.nextLine().split(" ");
@@ -30,13 +31,13 @@ public class Solution {
       int w = Integer.parseInt(inputs[1]);
       double weight = Double.parseDouble(inputs[2]);
       Edge e = new Edge(v, w, weight);
-      edgeweightgraph.addEdge(e);
+      edgeweightedgraph.addEdge(e);
     }
 
-    String input = scan.nextLine();
-    switch (input) {
+    String caseToGo = scan.nextLine();
+    switch (caseToGo) {
     case "Graph":
-      System.out.println(edgeweightgraph);
+      System.out.println(edgeweightedgraph);
       break;
 
     case "DirectedPaths":
