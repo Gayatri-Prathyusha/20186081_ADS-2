@@ -2,7 +2,9 @@ public class LSD {
     private static final int BITS_PER_BYTE = 8;
 
     // do not instantiate
-    LSD() { }
+    LSD() {
+
+    }
 
    /**  
      * Rearranges the array of W-character strings in ascending order.
@@ -10,22 +12,22 @@ public class LSD {
      * @param a the array to be sorted
      * @param w the number of characters per string
      */
-    public static void sort(String[] a, int w) {
+    public void sort(final String[] a, final int w) {
         int n = a.length;
         int R = 256;   // extend ASCII alphabet size
         String[] aux = new String[n];
 
-        for (int d = w-1; d >= 0; d--) {
+        for (int d = w - 1; d >= 0; d--) {
             // sort by key-indexed counting on dth character
 
             // compute frequency counts
-            int[] count = new int[R+1];
+            int[] count = new int[R + 1];
             for (int i = 0; i < n; i++)
                 count[a[i].charAt(d) + 1]++;
 
             // compute cumulates
             for (int r = 0; r < R; r++)
-                count[r+1] += count[r];
+                count[r + 1] += count[r];
 
             // move data
             for (int i = 0; i < n; i++)
@@ -66,24 +68,25 @@ public class LSD {
                 count[r+1] += count[r];
 
             // for most significant byte, 0x80-0xFF comes before 0x00-0x7F
-            if (d == w-1) {
-                int shift1 = count[R] - count[R/2];
-                int shift2 = count[R/2];
-                for (int r = 0; r < R/2; r++)
+            if (d == w - 1) {
+                int shift1 = count[R] - count[R / 2];
+                int shift2 = count[R / 2];
+                for (int r = 0; r < R / 2; r++)
                     count[r] += shift1;
-                for (int r = R/2; r < R; r++)
+                for (int r = R / 2; r < R; r++)
                     count[r] -= shift2;
             }
 
             // move data
             for (int i = 0; i < n; i++) {
-                int c = (a[i] >> BITS_PER_BYTE*d) & MASK;
+                int c = (a[i] >> BITS_PER_BYTE * d) & MASK;
                 aux[count[c]++] = a[i];
             }
 
             // copy back
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 a[i] = aux[i];
+            }
         }
     }
 }
