@@ -3,7 +3,7 @@
  */
 public class LSD {
     /**
-     * BITS value  to excule eval
+     * BITS value  to excule eval.
      */
     private static final int BITS_PER_BYTE = 8;
     /**
@@ -63,7 +63,7 @@ public class LSD {
      * @param a the array to be sorted
      */
     public static void sort(final int[] a) {
-        final int bits = 32;                 // each int is 32 bits 
+        final int bits = 32;                 // each int is 32 bits
         final int r1 = 1 << BITS_PER_BYTE;    // each bytes is between 0 and 255
         final int mask1 = r1 - 1;              // 0xFF
         final int w = bits / BITS_PER_BYTE;  // each int is 4 bytes

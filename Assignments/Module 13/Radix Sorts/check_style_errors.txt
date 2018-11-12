@@ -1,7 +1,4 @@
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 13/Radix Sorts/LSD.java:5: First sentence should end with a period. [JavadocStyle]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 13/Radix Sorts/LSD.java:66: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 2 errors.
