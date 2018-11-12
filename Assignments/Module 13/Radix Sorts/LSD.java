@@ -64,8 +64,9 @@ public class LSD {
             }
 
             // compute cumulates
-            for (int r = 0; r < R; r++)
+            for (int r = 0; r < R; r++) {
                 count[r+1] += count[r];
+            }
 
             // for most significant byte, 0x80-0xFF comes before 0x00-0x7F
             if (d == w - 1) {
