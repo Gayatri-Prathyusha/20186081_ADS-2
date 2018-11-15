@@ -177,21 +177,22 @@ public class TrieST<Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node put(Node x, final String key,
+    private Node put(final Node x, final String key,
      final Value val, final int d) {
-        if (x == null) {
-            x = new Node();
+        Node x1 = x;
+        if (x1 == null) {
+            x1 = new Node();
         }
         if (d == key.length()) {
-            if (x.val == null) {
+            if (x1.val == null) {
                 n++;
             }
-            x.val = val;
-            return x;
+            x1.val = val;
+            return x1;
         }
         char c = key.charAt(d);
-        x.next[c] = put(x.next[c], key, val, d + 1);
-        return x;
+        x1.next[c] = put(x1.next[c], key, val, d + 1);
+        return x1;
     }
 
     /**

@@ -131,8 +131,8 @@ public class BoggleBoard {
     /**
      * Initializes a random m-by-n board, according to the frequency
      * of letters in the English language.
-     * @param m the number of rows
-     * @param n the number of columns
+     * @param m1 the number of rows
+     * @param n1 the number of columns
      */
     public BoggleBoard(final int m1, final int n1) {
         this.m = m1;

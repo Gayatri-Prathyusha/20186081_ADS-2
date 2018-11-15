@@ -193,18 +193,11 @@ Starting audit...
 Audit done.
 Checkstyle ends with 183 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleBoard.java:134:8: Unused @param tag for 'm'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleBoard.java:135:8: Unused @param tag for 'n'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleBoard.java:137:34: Expected @param tag for 'm1'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleBoard.java:137:48: Expected @param tag for 'n1'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 4 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:180:22: Parameter x should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleGame.java:4: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleGame.java:8: Line has trailing spaces. [RegexpSingleline]
