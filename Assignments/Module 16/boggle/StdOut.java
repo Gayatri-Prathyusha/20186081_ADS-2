@@ -12,13 +12,15 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 /**
- *  This class provides methods for printing strings and numbers to standard output.
+ *  This class provides methods for printing strings and
+ *  numbers to standard output.
  *  <p>
  *  <b>Getting started.</b>
  *  To use this class, you must have {@code StdOut.class} in your
  *  Java classpath. If you used our autoinstaller, you should be all set.
  *  Otherwise, download
- *  <a href = "http://introcs.cs.princeton.edu/java/stdlib/StdOut.java">StdOut.java</a>
+ *  <a href = "http://introcs.cs.princeton.edu/java/stdlib/StdOut.java">
+ *  StdOut.java</a>
  *  and put a copy in your working directory.
  *  <p>
  *  Here is an example program that uses {@code StdOut}:
@@ -93,8 +95,7 @@ public final class StdOut {
         try {
             out = new PrintWriter(new OutputStreamWriter(
                 System.out, CHARSET_NAME), true);
-        }
-        catch (UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException e) {
             System.out.println(e);
         }
     }
@@ -211,7 +212,6 @@ public final class StdOut {
 
    /**
      * Prints an object to standard output and flushes standard output.
-     * 
      * @param x the object to print
      */
     public static void print(final Object x) {
@@ -221,7 +221,6 @@ public final class StdOut {
 
    /**
      * Prints a boolean to standard output and flushes standard output.
-     * 
      * @param x the boolean to print
      */
     public static void print(final boolean x) {
@@ -231,7 +230,6 @@ public final class StdOut {
 
    /**
      * Prints a character to standard output and flushes standard output.
-     * 
      * @param x the character to print
      */
     public static void print(final char x) {
@@ -241,7 +239,6 @@ public final class StdOut {
 
    /**
      * Prints a double to standard output and flushes standard output.
-     * 
      * @param x the double to print
      */
     public static void print(final double x) {
@@ -251,7 +248,6 @@ public final class StdOut {
 
    /**
      * Prints a float to standard output and flushes standard output.
-     * 
      * @param x the float to print
      */
     public static void print(final float x) {
@@ -261,17 +257,14 @@ public final class StdOut {
 
    /**
      * Prints an integer to standard output and flushes standard output.
-     * 
      * @param x the integer to print
      */
     public static void print(final int x) {
         out.print(x);
         out.flush();
     }
-
    /**
      * Prints a long integer to standard output and flushes standard output.
-     * 
      * @param x the long integer to print
      */
     public static void print(final long x) {
@@ -281,7 +274,6 @@ public final class StdOut {
 
    /**
      * Prints a short integer to standard output and flushes standard output.
-     * 
      * @param x the short integer to print
      */
     public static void print(final short x) {
@@ -323,7 +315,8 @@ public final class StdOut {
      * javase/7/docs/api/java/util/Formatter.html#syntax">format string</a>
      * @param args   the arguments accompanying the format string
      */
-    public static void printf(final Locale locale, final String format, final Object... args) {
+    public static void printf(final Locale locale,
+     final String format, final Object... args) {
         out.printf(locale, format, args);
         out.flush();
     }

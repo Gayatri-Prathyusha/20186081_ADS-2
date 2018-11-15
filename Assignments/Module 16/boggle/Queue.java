@@ -172,9 +172,8 @@ public class Queue<Item> implements Iterable<Item> {
      * items in this queue in FIFO order.
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+        return new ListIterator<Item>(first);
     }
-
 
     /**
      * Class for list iterator.
@@ -182,9 +181,9 @@ public class Queue<Item> implements Iterable<Item> {
      *
      * @param      <Item>  The item
      */
-    private class ListIterator<Item> implements Iterator<Item> {
+    private final class ListIterator<Item> implements Iterator<Item> {
         /**
-         * { var_description }
+         * current variable.
          */
         private Node<Item> current;
         /**
