@@ -1,25 +1,7 @@
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:20: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:30:43: '3' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:30:46: '5' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:30:49: '11' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:32:34: '8' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:33:42: '11' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:54:32: Array brackets at illegal position. [ArrayTypeStyle]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:75: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:75:42: ')' is preceded with whitespace. [ParenPad]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:79:38: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:93:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:109:34: '3' is a magic number. [MagicNumber]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:111:8: '}' at column 8 should be alone on a line. [RightCurly]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:111:9: 'return' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:111:9: '}' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 15 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Solution.java:1:8: Unused import - java.util.Arrays. [UnusedImports]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/StdOut.java:16: Line is longer than 80 characters (found 84). [LineLength]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/StdOut.java:22: Line is longer than 80 characters (found 87). [LineLength]
@@ -613,35 +595,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 43 errors.
 Starting audit...
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:13: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:14: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:17: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:18: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:20: Line is longer than 80 characters (found 105). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:23: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:24:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:24:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:25:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:28: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:29:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:30:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:44: Expected @return tag. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:51: Expected @return tag. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:58:21: Parameter item should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:58:26: Expected @param tag for 'item'. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:70: Expected @return tag. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:71: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:75: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:76:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:78: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:78:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:79: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:79:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:81:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:82: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Bag.java:84: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 27 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:10: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:28: Line is longer than 80 characters (found 84). [LineLength]

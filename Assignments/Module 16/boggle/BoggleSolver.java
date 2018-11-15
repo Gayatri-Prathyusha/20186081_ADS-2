@@ -17,7 +17,23 @@ public class BoggleSolver {
      */
     private static final String QU_STRING = "QU";
     /**
-     * 
+     * magic number eliminating.
+     */
+    private static final int ELEVEN = 11;
+    /**
+     * magic number eliminating.
+     */
+    private static final int EIGHT = 8;
+    /**
+     * magic number eliminating.
+     */
+    private static final int FIVE = 5;
+    /**
+     * magic number eliminating.
+     */
+    private static final int THREE = 3;
+    /**
+     *
      * Constructs the object.
      * Initializes the data structure using the given
      * array of strings as the dictionary.
@@ -27,10 +43,10 @@ public class BoggleSolver {
      */
     public BoggleSolver(final String[] dictionary) {
         dictionarytrie = new TrieST<Integer>();
-        int[] points = {0, 0, 0, 1, 1, 2, 3, 5, 11};
+        int[] points = {0, 0, 0, 1, 1, 2, THREE, FIVE, ELEVEN};
         for (String word : dictionary) {
-            if (word.length() >= 8) {
-                dictionarytrie.put(word, 11);
+            if (word.length() >= EIGHT) {
+                dictionarytrie.put(word, ELEVEN);
             } else {
                 dictionarytrie.put(word, points[word.length()]);
             }
@@ -51,7 +67,7 @@ public class BoggleSolver {
         for (int row = 0; row < board.rows(); row++) {
            for (int col = 0; col < board.cols(); col++) {
                String charSequence = addLetter("", board.getLetter(row, col));
-               boolean marked[][] = new boolean[board.rows()][board.cols()];
+               boolean[][] marked = new boolean[board.rows()][board.cols()];
                marked[row][col] = true;
                dfs(foundWords, charSequence, marked, row, col, board);
             }
@@ -72,11 +88,13 @@ public class BoggleSolver {
     private void dfs(final Set<String> foundWords, final String charSequence,
         final boolean[][] marked, final int startRow, final int startCol,
         final BoggleBoard board) {
-            if (isValidWord(charSequence) ) foundWords.add(charSequence);
+            if (isValidWord(charSequence)) {
+                foundWords.add(charSequence);
+            }
             for (int row = Math.max(0, startRow - 1); row <= Math.min(
                 board.rows() - 1, startRow + 1); row++) {
                 for (int col = Math.max(0, startCol - 1); col <= Math.min(
-                    board.cols() - 1,startCol + 1); col++) {
+                    board.cols() - 1, startCol + 1); col++) {
                     if (marked[row][col]) {
                         continue;
                     }
@@ -90,6 +108,14 @@ public class BoggleSolver {
             }
         }
     }
+    /**
+     * Adds a letter.
+     *
+     * @param      to      { parameter_description }
+     * @param      letter  The letter
+     *
+     * @return     { description_of_the_return_value }
+     */
     private String addLetter(final String to, final char letter) {
         if (letter == Q_LETTER) {
             return to + QU_STRING;
@@ -106,9 +132,10 @@ public class BoggleSolver {
      * @return     True if valid word, False otherwise.
      */
     private boolean isValidWord(final String currentWord) {
-      if (currentWord.length() < 3) {
+        if (currentWord.length() < (THREE)) {
            return false;
-       }return dictionarytrie.contains(currentWord);
+        }
+        return dictionarytrie.contains(currentWord);
     }
     /**
      * Calculates the Score for the entered word.
