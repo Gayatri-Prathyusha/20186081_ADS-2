@@ -197,7 +197,11 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:142:31: '65' is a magic number. [MagicNumber]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:193:21: '65' is a magic number. [MagicNumber]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:193:43: '65' is a magic number. [MagicNumber]
 Audit done.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleGame.java:4: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleGame.java:8: Line has trailing spaces. [RegexpSingleline]

@@ -17,7 +17,6 @@
  *  the 5
  *
  ******************************************************************************/
-
 /**
  *  The {@code TrieST} class represents an symbol table of key-value
  *  pairs, with string keys and generic values.
@@ -59,7 +58,7 @@ public class TrieST<Value> {
     /**
      * extended ASCII.
      */
-    private static final int R = 256;
+    private static final int R = 26;
     /**
      * root of trie.
      */
@@ -140,7 +139,7 @@ public class TrieST<Value> {
             return x;
         }
         char c = key.charAt(d);
-        return get(x.next[c], key, d + 1);
+        return get(x.next[c - 65], key, d + 1);
     }
 
     /**
@@ -191,7 +190,7 @@ public class TrieST<Value> {
             return x1;
         }
         char c = key.charAt(d);
-        x1.next[c] = put(x1.next[c], key, val, d + 1);
+        x1.next[c - 65] = put(x1.next[c - 65], key, val, d + 1);
         return x1;
     }
 
