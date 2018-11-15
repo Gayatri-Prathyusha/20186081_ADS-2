@@ -7,7 +7,7 @@
  *  A string symbol table for extended ASCII strings, implemented
  *  using a 256-way trie.
  *
- *  % java TrieST < shellsST.txt 
+ *  % java TrieST < shellsST.txt
  *  by 4
  *  sea 6
  *  sells 1
@@ -25,14 +25,17 @@
  *  <em>delete</em>, <em>size</em>, and <em>is-empty</em> methods.
  *  It also provides character-based methods for finding the string
  *  in the symbol table that is the <em>longest prefix</em> of a given prefix,
- *  finding all strings in the symbol table that <em>start with</em> a given prefix,
- *  and finding all strings in the symbol table that <em>match</em> a given pattern.
+ *  finding all strings in the symbol table that <em>start
+ *   with</em> a given prefix,
+ *  and finding all strings in the symbol table
+ *   that <em>match</em> a given pattern.
  *  A symbol table implements the <em>associative array</em> abstraction:
  *  when associating a value with a key that is already in the symbol table,
  *  the convention is to replace the old value with the new value.
  *  Unlike {@link java.util.Map}, this class uses the convention that
  *  values cannot be {@code null}—setting the
- *  value associated with a key to {@code null} is equivalent to deleting the key
+ *  value associated with a key to {@code null}
+ *   is equivalent to deleting the key
  *  from the symbol table.
  *  <p>
  *  This implementation uses a 256-way trie.
@@ -42,8 +45,15 @@
  *  The <em>size</em>, and <em>is-empty</em> operations take constant time.
  *  Construction takes constant time.
  *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/52trie">Section 5.2</a> of
+ *  For additional documentation, see 
+ *  <a href="https://algs4.cs.princeton.edu/52trie">
+ *  Section 5.2</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
+ */
+/**
+ * Class for trie st.
+ *
+ * @param      <Value>  The value
  */
 public class TrieST<Value> {
     /**
@@ -81,14 +91,20 @@ public class TrieST<Value> {
     /**
      * Returns the value associated with the given key.
      * @param key the key
-     * @return the value associated with the given key if the key is in the symbol table
+     * @return the value associated with the given key if
+     *  the key is in the symbol table
      *     and {@code null} if the key is not in the symbol table
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public Value get(final String key) {
-        if (key == null) throw new IllegalArgumentException("argument to get() is null");
+        if (key == null) {
+            throw new IllegalArgumentException(
+                "argument to get() is null");
+        }
         Node x = get(root, key, 0);
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         return (Value) x.val;
     }
 
@@ -100,7 +116,10 @@ public class TrieST<Value> {
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public boolean contains(final String key) {
-        if (key == null) throw new IllegalArgumentException("argument to contains() is null");
+        if (key == null) {
+            throw new IllegalArgumentException(
+                "argument to contains() is null");
+        }
         return get(key) != null;
     }
 
@@ -114,10 +133,14 @@ public class TrieST<Value> {
      * @return     { description_of_the_return_value }
      */
     private Node get(final Node x, final String key, final int d) {
-        if (x == null) return null;
-        if (d == key.length()) return x;
+        if (x == null) {
+            return null;
+        }
+        if (d == key.length()) {
+            return x;
+        }
         char c = key.charAt(d);
-        return get(x.next[c], key, d+1);
+        return get(x.next[c], key, d + 1);
     }
 
     /**
@@ -133,10 +156,15 @@ public class TrieST<Value> {
      *  {@code null}
      */
     public void put(final String key, final Value val) {
-        if (key == null) throw new IllegalArgumentException(
+        if (key == null) {
+            throw new IllegalArgumentException(
             "first argument to put() is null");
-        if (val == null) delete(key);
-        else root = put(root, key, val, 0);
+        }
+        if (val == null) {
+            delete(key);
+        } else {
+            root = put(root, key, val, 0);
+        }
     }
 
     /**
@@ -149,20 +177,21 @@ public class TrieST<Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node put(Node x, final String key, final Value val, final int d) {
-        if (x == null) {
-            x = new Node();
+    private Node put(final Node x, final String key, final Value val, final int d) {
+        Node y100 = x;
+        if (y100 == null) {
+            y100 = new Node();
         }
         if (d == key.length()) {
-            if (x.val == null) {
+            if (y100.val == null) {
                 n++;
             }
-            x.val = val;
-            return x;
+            y100.val = val;
+            return y100;
         }
         char c = key.charAt(d);
-        x.next[c] = put(x.next[c], key, val, d+1);
-        return x;
+        y100.next[c] = put(y100.next[c], key, val, d + 1);
+        return y100;
     }
 
     /**
@@ -175,7 +204,8 @@ public class TrieST<Value> {
 
     /**
      * Is this symbol table empty?
-     * @return {@code true} if this symbol table is empty and {@code false} otherwise
+     * @return {@code true} if this symbol table is
+     * empty and {@code false} otherwise
      */
     public boolean isEmpty() {
         return size() == 0;
@@ -211,9 +241,14 @@ public class TrieST<Value> {
      * @param      prefix   The prefix
      * @param      results  The results
      */
-    private void collect(final Node x, final StringBuilder prefix, final Queue<String> results) {
-        if (x == null) return;
-        if (x.val != null) results.enqueue(prefix.toString());
+    private void collect(final Node x, final StringBuilder prefix,
+     final Queue<String> results) {
+        if (x == null) {
+            return;
+        }
+        if (x.val != null) {
+            results.enqueue(prefix.toString());
+        }
         for (char c = 0; c < R; c++) {
             prefix.append(c);
             collect(x.next[c], prefix, results);
@@ -244,12 +279,16 @@ public class TrieST<Value> {
      */
     private void collect(final Node x, final StringBuilder prefix,
      final String pattern, final Queue<String> results) {
-        if (x == null) return;
-        int d = prefix.length();
-        if (d == pattern.length() && x.val != null)
-            results.enqueue(prefix.toString());
-        if (d == pattern.length())
+        if (x == null) {
             return;
+        }
+        int d = prefix.length();
+        if (d == pattern.length() && x.val != null) {
+            results.enqueue(prefix.toString());
+        }
+        if (d == pattern.length()) {
+            return;
+        }
         char c = pattern.charAt(d);
         if (c == '.') {
             for (char ch = 0; ch < R; ch++) {
@@ -257,8 +296,7 @@ public class TrieST<Value> {
                 collect(x.next[ch], prefix, pattern, results);
                 prefix.deleteCharAt(prefix.length() - 1);
             }
-        }
-        else {
+        } else {
             prefix.append(c);
             collect(x.next[c], prefix, pattern, results);
             prefix.deleteCharAt(prefix.length() - 1);
@@ -277,19 +315,24 @@ public class TrieST<Value> {
      *  is {@code null}
      */
     public String longestPrefixOf(final String query) {
-        if (query == null) throw new IllegalArgumentException(
+        if (query == null) {
+            throw new IllegalArgumentException(
             "argument to longestPrefixOf() is null");
+        }
         int length = longestPrefixOf(root, query, 0, -1);
-        if (length == -1) return null;
-        else return query.substring(0, length);
+        if (length == -1) {
+            return null;
+        } else {
+            return query.substring(0, length);
+        }
     }
 
 
     /**
-     * returns the length of the longest string key in the subtrie 
-     * rooted at x that is a prefix of the query string,assuming
-     * the first d character match and we have alreadyfound a
-     * prefix match of given length (-1 if no such match)
+     * returns the length of the longest string key in the subtrie,
+     * rooted at x that is a prefix of the query string,assuming,
+     * the first d character match and we have alreadyfound a,
+     * prefix match of given length (-1 if no such match).
      *
      * @param      x       { parameter_description }
      * @param      query   The query
@@ -298,12 +341,19 @@ public class TrieST<Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private int longestPrefixOf(final Node x, final String query, final int d, int length) {
-        if (x == null) return length;
-        if (x.val != null) length = d;
-        if (d == query.length()) return length;
+    private int longestPrefixOf(final Node x, final String query,
+     final int d, int length) {
+        if (x == null) {
+            return length;
+        }
+        if (x.val != null) {
+            length = d;
+        }
+        if (d == query.length()) {
+            return length;
+        }
         char c = query.charAt(d);
-        return longestPrefixOf(x.next[c], query, d+1, length);
+        return longestPrefixOf(x.next[c], query, d + 1, length);
     }
 
     /**
@@ -311,8 +361,9 @@ public class TrieST<Value> {
      * @param key the key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public void delete(String key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
+    public void delete(final String key) {
+        if (key == null) throw new IllegalArgumentException(
+            "argument to delete() is null");
         root = delete(root, key, 0);
     }
 
@@ -326,25 +377,36 @@ public class TrieST<Value> {
      * @return     { description_of_the_return_value }
      */
     private Node delete(final Node x, final String key, final int d) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         if (d == key.length()) {
-            if (x.val != null) n--;
+            if (x.val != null) {
+                n--;
+            }
             x.val = null;
-        }
-        else {
+        } else {
             char c = key.charAt(d);
-            x.next[c] = delete(x.next[c], key, d+1);
+            x.next[c] = delete(x.next[c], key, d + 1);
         }
-
         // remove subtrie rooted at x if it is completely empty
-        if (x.val != null) return x;
+        if (x.val != null) {
+            return x;
+        }
         for (int c = 0; c < R; c++)
-            if (x.next[c] != null)
+            if (x.next[c] != null) {
                 return x;
+            }
         return null;
     }
-
-    public boolean hasPrefix(final String query) {
+    /**
+     * Determines if it has prefix.
+     *
+     * @param      query  The query
+     *
+     * @return     True if has prefix, False otherwise.
+     */
+    private boolean hasPrefix(final String query) {
         Node x = get(root, query, 0);
         return x != null;
     }
