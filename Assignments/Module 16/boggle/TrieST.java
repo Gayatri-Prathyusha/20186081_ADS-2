@@ -45,7 +45,7 @@
  *  The <em>size</em>, and <em>is-empty</em> operations take constant time.
  *  Construction takes constant time.
  *  <p>
- *  For additional documentation, see 
+ *  For additional documentation, see
  *  <a href="https://algs4.cs.princeton.edu/52trie">
  *  Section 5.2</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
@@ -177,21 +177,21 @@ public class TrieST<Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node put(final Node x, final String key, final Value val, final int d) {
-        Node y100 = x;
-        if (y100 == null) {
-            y100 = new Node();
+    private Node put(Node x, final String key,
+     final Value val, final int d) {
+        if (x == null) {
+            x = new Node();
         }
         if (d == key.length()) {
-            if (y100.val == null) {
+            if (x.val == null) {
                 n++;
             }
-            y100.val = val;
-            return y100;
+            x.val = val;
+            return x;
         }
         char c = key.charAt(d);
-        y100.next[c] = put(y100.next[c], key, val, d + 1);
-        return y100;
+        x.next[c] = put(x.next[c], key, val, d + 1);
+        return x;
     }
 
     /**
@@ -342,18 +342,19 @@ public class TrieST<Value> {
      * @return     { description_of_the_return_value }
      */
     private int longestPrefixOf(final Node x, final String query,
-     final int d, int length) {
+     final int d, final int length) {
+        int len = length;
         if (x == null) {
-            return length;
+            return len;
         }
         if (x.val != null) {
-            length = d;
+            len = d;
         }
         if (d == query.length()) {
-            return length;
+            return len;
         }
         char c = query.charAt(d);
-        return longestPrefixOf(x.next[c], query, d + 1, length);
+        return longestPrefixOf(x.next[c], query, d + 1, len);
     }
 
     /**
@@ -362,8 +363,10 @@ public class TrieST<Value> {
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public void delete(final String key) {
-        if (key == null) throw new IllegalArgumentException(
+        if (key == null) {
+            throw new IllegalArgumentException(
             "argument to delete() is null");
+        }
         root = delete(root, key, 0);
     }
 
@@ -393,10 +396,11 @@ public class TrieST<Value> {
         if (x.val != null) {
             return x;
         }
-        for (int c = 0; c < R; c++)
+        for (int c = 0; c < R; c++) {
             if (x.next[c] != null) {
                 return x;
             }
+        }
         return null;
     }
     /**

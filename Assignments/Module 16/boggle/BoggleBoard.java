@@ -93,7 +93,6 @@ public class BoggleBoard {
             }
         }
     }
-    
     /**
      * Initializes a board from the given filename.
      * @param filename the name of the file containing the Boggle board
@@ -135,20 +134,20 @@ public class BoggleBoard {
      * @param m the number of rows
      * @param n the number of columns
      */
-    public BoggleBoard(final int m, final int n) {
-        this.m = m;
-        this.n = n;
-        if (m <= 0) {
+    public BoggleBoard(final int m1, final int n1) {
+        this.m = m1;
+        this.n = n1;
+        if (m1 <= 0) {
             throw new IllegalArgumentException(
             "number of rows must be a positive integer");
         }
-        if (n <= 0) {
+        if (n1 <= 0) {
             throw new IllegalArgumentException(
             "number of columns must be a positive integer");
         }
-        board = new char[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        board = new char[m1][n1];
+        for (int i = 0; i < m1; i++) {
+            for (int j = 0; j < n1; j++) {
                 int r = StdRandom.discrete(FREQUENCIES);
                 board[i][j] = ALPHABET.charAt(r);
             }
@@ -248,7 +247,7 @@ public class BoggleBoard {
         StdOut.println(board1);
         StdOut.println();
 
-        // initialize a 4-by-4 board using 
+        // initialize a 4-by-4 board using
         //letter frequencies in English language.
         StdOut.println("Random 4-by-4 board:");
         BoggleBoard board2 = new BoggleBoard((2 + 2), (2 + 2));
