@@ -410,7 +410,7 @@ public class TrieST<Value> {
      *
      * @return     True if has prefix, False otherwise.
      */
-    private boolean hasPrefix(final String query) {
+    protected boolean hasPrefix(final String query) {
         Node x = get(root, query, 0);
         return x != null;
     }
