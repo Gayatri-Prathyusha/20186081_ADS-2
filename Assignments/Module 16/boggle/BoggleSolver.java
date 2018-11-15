@@ -27,7 +27,7 @@ public class BoggleSolver {
    // Returns the set of all valid words in the given Boggle board, as an Iterable.
    public Iterable<String> getAllValidWords(BoggleBoard board) {
       if (board == null) 
-         throw new java.lang.IllegalArgumentException("Board is null!");
+         throw new java.lang.IllegalArgumentException("board is null!");
       Set<String> foundWords = new TreeSet<String>();
       for (int row = 0; row < board.rows(); row++) {
          for (int col = 0; col < board.cols(); col++) {
@@ -49,9 +49,9 @@ public class BoggleSolver {
             if (marked[row][col]) {
             	continue;
             }
-            // if (!dictionarytrie.keysWithPrefix(charSequence)) {
-            // 	continue;
-            // }
+            if (!dictionarytrie.hasPrefix(charSequence)) {
+            	continue;
+            }
             marked[row][col] = true;
             dfs(foundWords, addLetter(charSequence, board.getLetter(row, col)), marked, row, col, board);
             marked[row][col] = false;
@@ -67,10 +67,15 @@ public class BoggleSolver {
    }
    
     private boolean isValidWord(String currentWord) {
-      if (currentWord == null) return false;
-      if (dictionarytrie.contains(currentWord) && currentWord.length() > 2) return true;
-      else return false;
-   }
+      if (currentWord == null) {
+           return false;
+       }
+      if (dictionarytrie.contains(currentWord) && currentWord.length() > 2) {
+      	return true;
+      } else {
+      return false;
+      }
+    }
 
 
 	// Returns the score of the given word if it is in the dictionary, zero otherwise.

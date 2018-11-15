@@ -263,5 +263,10 @@ public class TrieST<Value> {
                 return x;
         return null;
     }
+    
+    public boolean hasPrefix(String query) {
+        Node x = get(root, query, 0);
+        return x != null;
+    }
 
 }

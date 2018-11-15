@@ -41,19 +41,15 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:68: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:69:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:69:33: Parameter currentWord should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:70: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:71: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:71: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:71:7: Conditional logic can be removed. [SimplifyBooleanReturn]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:72: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:76: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:77: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:78:9: Class 'BoggleSolver' looks like designed for extension (can be subclassed), but the method 'scoreOf' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'BoggleSolver' final or making the method 'scoreOf' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:78:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:78:28: Parameter word should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:79:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:73:7: Conditional logic can be removed. [SimplifyBooleanReturn]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:81: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:82: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:83:9: Class 'BoggleSolver' looks like designed for extension (can be subclassed), but the method 'scoreOf' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'BoggleSolver' final or making the method 'scoreOf' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:83:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:83:28: Parameter word should be final. [FinalParameters]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleSolver.java:84:19: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 53 errors.
+Checkstyle ends with 49 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/Solution.java:1:8: Unused import - java.util.Arrays. [UnusedImports]
@@ -797,8 +793,12 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:260: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:261: 'for' construct must use '{}'s. [NeedBraces]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:262: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:266: Line has trailing spaces. [RegexpSingleline]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:267:5: Class 'TrieST' looks like designed for extension (can be subclassed), but the method 'hasPrefix' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TrieST' final or making the method 'hasPrefix' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:267:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/TrieST.java:267:30: Parameter query should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 96 errors.
+Checkstyle ends with 100 errors.
 Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleGame.java:4: Line has trailing spaces. [RegexpSingleline]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 16/boggle/BoggleGame.java:8: Line has trailing spaces. [RegexpSingleline]
