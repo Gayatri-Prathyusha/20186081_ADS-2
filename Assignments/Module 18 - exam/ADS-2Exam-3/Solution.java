@@ -143,8 +143,6 @@ class T9 {
             words.put(word, st.get(word));
         }
     }
-
-
     /**
      * Gets all words.
      * get all the prefixes that match with given prefix.
@@ -228,6 +226,7 @@ class T9 {
         Object[] keys = wordstable.keySet().toArray();
         Arrays.sort(keys);
         ArrayList<String> arraylist = new ArrayList<>();
+        System.out.println((keys.length - 1) - k);
         for (int i = keys.length - 1; i > keys.length - 1 - k; i--) {
             arraylist.add(wordstable.get(keys[i]));
         }

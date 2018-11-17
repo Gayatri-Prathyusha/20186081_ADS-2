@@ -6,7 +6,7 @@ Starting audit...
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 18 - exam/ADS-2Exam-3/Solution.java:111: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 18 - exam/ADS-2Exam-3/Solution.java:140:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 18 - exam/ADS-2Exam-3/Solution.java:140:15: Parameter st should be final. [FinalParameters]
-[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 18 - exam/ADS-2Exam-3/Solution.java:216: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] /Users/lovely/Desktop/MSIT/1st/20186081_ADS-2/Assignments/Module 18 - exam/ADS-2Exam-3/Solution.java:214: Line is longer than 80 characters (found 88). [LineLength]
 Audit done.
 Checkstyle ends with 8 errors.
 Starting audit...

@@ -220,7 +220,7 @@ fine
 seeking
 ----------------------------------------
 
-########## Testcase 3: Passed ##########
+########## Testcase 3: Failed ##########
 Expected Output: 
 hello
 is
@@ -228,6 +228,7 @@ right
 words
 
 Your Output: 
+5
 hello
 is
 right
@@ -283,9 +284,10 @@ paper
 keep
 
 Your Output: 
+-3
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
-	at T9.getSuggestions(Solution.java:232)
-	at T9.t9(Solution.java:246)
+	at T9.getSuggestions(Solution.java:231)
+	at T9.t9(Solution.java:245)
 	at Solution.main(Solution.java:79)
 ----------------------------------------
 
