@@ -102,11 +102,23 @@ public class Solution {
 	}
 
 
+/**
+ * Class for T9.
+ */
 class T9 {
-
+	private TST<Integer> words;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      st    symbol table.
+	 */
 	public T9(BinarySearchST<String, Integer> st) {
-		// your code goes here
+		words = new TST();
+		for (String word : st.keys()) {
+			words.put(word, st.get(word));
+		}
 	}
+
 
 	// get all the prefixes that match with given prefix.
 	public Iterable<String> getAllWords(String prefix) {
