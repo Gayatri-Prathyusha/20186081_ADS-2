@@ -284,8 +284,8 @@ keep
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
-	at T9.getSuggestions(Solution.java:231)
-	at T9.t9(Solution.java:245)
-	at Solution.main(Solution.java:79)
+	at T9.getSuggestions(Solution.java:243)
+	at T9.t9(Solution.java:257)
+	at Solution.main(Solution.java:88)
 ----------------------------------------
 

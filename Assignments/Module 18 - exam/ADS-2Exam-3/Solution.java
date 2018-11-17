@@ -6,10 +6,18 @@ import java.util.ArrayList;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        /**
+         * empty construter.
+         */
+    }
 
     /**
-     * Main function;
+     * Main function.
      *
      * @param      args  The arguments
      */
@@ -20,7 +28,8 @@ public class Solution {
         switch (cases) {
         case "loadDictionary":
             // input000.txt and output000.txt
-            BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
+            BinarySearchST<String, Integer>
+             hash = loadDictionary("/Files/t9.csv");
             while (scan.hasNextLine()) {
                 String key = scan.nextLine();
                 System.out.println(hash.get(key));
@@ -107,8 +116,10 @@ public class Solution {
      *
      * @return     { st. }
      */
-    public static BinarySearchST<String, Integer> loadDictionary(final String file) {
-            BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
+    public static BinarySearchST
+    <String, Integer> loadDictionary(final String file) {
+            BinarySearchST<String, Integer>  st = new
+             BinarySearchST<String, Integer>();
             String[] message = toReadFile(file);
             for (String word : message) {
                 word = word.toLowerCase();
@@ -137,7 +148,7 @@ class T9 {
      *
      * @param      st    symbol table.
      */
-    public T9(BinarySearchST<String, Integer> st) {
+    protected T9(final BinarySearchST<String, Integer> st) {
         words = new TST();
         for (String word : st.keys()) {
             words.put(word, st.get(word));
@@ -211,7 +222,8 @@ class T9 {
      *
      * @return     The suggestions.
      */
-    public Iterable<String> getSuggestions(final Iterable<String> words1, final int k) {
+    public Iterable<String> getSuggestions(
+        final Iterable<String> words1, final int k) {
         HashMap<Integer, String> wordstable = new HashMap<>();
         for (String w : words1) {
             for (String sw : getAllWords(w)) {
