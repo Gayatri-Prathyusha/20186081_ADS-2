@@ -120,9 +120,15 @@ class T9 {
 	}
 
 
-	// get all the prefixes that match with given prefix.
-	public Iterable<String> getAllWords(String prefix) {
-		// your code goes here
+	/**
+	 * Gets all words.
+	 * get all the prefixes that match with given prefix.
+	 *
+	 * @param      prefix  The prefix
+	 *
+	 * @return     All words.
+	 */
+	public Iterable<String> getAllWords(final String prefix) {
 		return words.keysWithPrefix(prefix);
 	}
 
