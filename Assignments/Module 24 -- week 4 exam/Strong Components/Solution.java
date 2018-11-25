@@ -20,67 +20,67 @@ class Solution {
                 case 1:
                     KosarajuSharirSCC kscc = new KosarajuSharirSCC(dg.complete(vertex));
                     int components = kscc.count();
-                    System.out.println("For complete graph, Number of Strong components are " + components);
+                    System.out.println("For Complete graph, Number of Strong components are " + components);
                     //break;
                 case 2:
                     kscc = new KosarajuSharirSCC(dg.simple(vertex, edge));
                     components = kscc.count();
-                    System.out.println("For simple graph, Number of Strong components are " + components);
+                    System.out.println("For Simple graph, Number of Strong components are " + components);
                     //break;
                 case 3:
                     kscc = new KosarajuSharirSCC(dg.path(vertex));
                     components = kscc.count();
-                    System.out.println("For path graph, Number of Strong components are " + components);
+                    System.out.println("For Path graph, Number of Strong components are " + components);
                     //break;
                 case 4:
                     kscc = new KosarajuSharirSCC(dg.cycle(vertex));
                     components = kscc.count();
-                    System.out.println("For cycle graph, Number of Strong components are " + components);
+                    System.out.println("For Cycle graph, Number of Strong components are " + components);
                     //break;
                 case 5:
-                    kscc = new KosarajuSharirSCC(dg.eulerianPath(vertex, edge));
+                    kscc = new KosarajuSharirSCC(dg.eulerianPath(vertex, condition));
                     components = kscc.count();
                     System.out.println("For Eulierian path graph, Number of Strong components are " + components);
                     //break;
                 case 6:
-                    kscc = new KosarajuSharirSCC(dg.eulerianCycle(vertex, edge));
+                    kscc = new KosarajuSharirSCC(dg.eulerianCycle(vertex, condition));
                     components = kscc.count();
                     System.out.println("For Eulierian cycle graph, Number of Strong components are " + components);
                     //break;
                 case 7:
                     kscc = new KosarajuSharirSCC(dg.binaryTree(vertex));
                     components = kscc.count();
-                    System.out.println("For binary tree, Number of Strong components are " + components);
+                    System.out.println("For Binary tree, Number of Strong components are " + components);
                     //break;
                 case 8:
                     kscc = new KosarajuSharirSCC(dg.tournament(vertex));
                     components = kscc.count();
-                    System.out.println("For tournament, Number of Strong components are " + components);
+                    System.out.println("For Tournament, Number of Strong components are " + components);
                     //break;
                 case 9:
-                    kscc = new KosarajuSharirSCC(dg.dag(vertex, edge));
+                    kscc = new KosarajuSharirSCC(dg.dag(vertex, condition));
                     components = kscc.count();
                     System.out.println("For DAG, Number of Strong components are " + components);
                     //break;
                 case 10:
-                    kscc = new KosarajuSharirSCC(dg.rootedInDAG(vertex, edge));
+                    kscc = new KosarajuSharirSCC(dg.rootedInDAG(vertex, condition));
                     components = kscc.count();
-                    System.out.println("For rooted-in DAG, Number of Strong components are " + components);
+                    System.out.println("For Rooted-in DAG, Number of Strong components are " + components);
                     //break;
                 case 11:
-                    kscc = new KosarajuSharirSCC(dg.rootedOutDAG(vertex, edge));
+                    kscc = new KosarajuSharirSCC(dg.rootedOutDAG(vertex, condition));
                     components = kscc.count();
-                    System.out.println("For rooted-out DAG, Number of Strong components are " + components);
+                    System.out.println("For Rooted-out DAG, Number of Strong components are " + components);
                     //break;
                 case 12:
                     kscc = new KosarajuSharirSCC(dg.rootedInTree(vertex));
                     components = kscc.count();
-                    System.out.println("For rooted-in tree, Number of Strong components are " + components);
+                    System.out.println("For Rooted-in tree, Number of Strong components are " + components);
                     //break;
                 case 13:
                     kscc = new KosarajuSharirSCC(dg.rootedOutTree(vertex));
                     components = kscc.count();
-                    System.out.println("For rooted-out tree, Number of Strong components are " + components);
+                    System.out.println("For Rooted-out tree, Number of Strong components are " + components);
                     break;
                 default:
                     System.out.println("Wrong case number");
