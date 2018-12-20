@@ -1,57 +1,57 @@
+
 /**
  * Class for directed cycle.
  */
-class DirectedCycle {
+public class DirectedCycle {
     /**
-     * { var_description }.
+     * marked array of boolean type.
      */
     private boolean[] marked;
     /**
-     * { item_description }.
+     * edgeTo array of integer type.
      */
     private int[] edgeTo;
     /**
-     * { var_description }.
+     * onStack array of boolean type.
      */
     private boolean[] onStack;
     /**
-     * { var_description }.
+     * directed cycle.
      */
     private Stack<Integer> cycle;
     /**
      * Determines whether the digraph {@code G} has a directed cycle and, if so,
      * finds such a cycle.
-     *
-     * @param      gr    The graphics
+     * Time complexity : O(V).
+     * @param g the digraph
      */
-    DirectedCycle(final Digraph gr) {
-        marked  = new boolean[gr.ver()];
-        onStack = new boolean[gr.ver()];
-        edgeTo  = new int[gr.ver()];
-        for (int v = 0; v < gr.ver(); v++) {
-            if (!marked[v] && cycle == null) {
-                // System.out.println("first");
-                // System.out.println(v);
-                dfs(gr, v);
+    public DirectedCycle(final Digraph g) {
+        marked  = new boolean[g.v()];
+        onStack = new boolean[g.v()];
+        edgeTo  = new int[g.v()];
+        for (int i = 0; i < g.v(); i++) {
+            if (!marked[i] && cycle == null) {
+                dfs(g, i);
             }
         }
     }
-
     /**
-     * { function_description }.
-     *
-     * @param      gr    The graphics
-     * @param      v     { parameter_description }
+     * dfs method.
+     *Time complexity : O(V).
+     * @param      g digraph
+     * @param      v integer variable.
      */
-    private void dfs(final Digraph gr, final int v) {
+    public void dfs(final Digraph g, final int v) {
         onStack[v] = true;
         marked[v] = true;
-        for (int w : gr.adj(v)) {
+        for (int w : g.adj(v)) {
+
+            // short circuit if directed cycle found
             if (cycle != null) {
                 return;
             } else if (!marked[w]) {
                 edgeTo[w] = v;
-                dfs(gr, w);
+                dfs(g, w);
             } else if (onStack[w]) {
                 cycle = new Stack<Integer>();
                 for (int x = v; x != w; x = edgeTo[x]) {
@@ -64,33 +64,33 @@ class DirectedCycle {
         }
         onStack[v] = false;
     }
-
     /**
      * Does the digraph have a directed cycle?
-     *
-     * @return     {@code true} if the digraph has a directed cycle, {@code
-     *             false} otherwise
+     * Time complexity : O(1).
+     * @return {@code true} if
+     *  the digraph has a directed cycle, {@code false} otherwise
      */
     public boolean hasCycle() {
         return cycle != null;
     }
-
     /**
-     * Returns a directed cycle if the digraph has a directed cycle, and {@code
-     * null} otherwise.
-     *
-     * @return     a directed cycle (as an iterable) if the digraph has a
-     *             directed cycle, and {@code null} otherwise
+     * Returns a directed cycle if
+     * the digraph has a directed cycle, and {@code null} otherwise.
+     * Time complexity : O(V).
+     * @return a directed cycle (as an iterable)
+     * if the digraph has a directed cycle,
+     *    and {@code null} otherwise
      */
     public Iterable<Integer> cycle() {
         return cycle;
     }
     /**
-     * { function_description }.
-     *
-     * @return     { description_of_the_return_value }
+     * check method.
+     *Time complexity : O(V).
+     * @return true or false.
      */
     private boolean check() {
+
         if (hasCycle()) {
             // verify cycle
             int first = -1, last = -1;
@@ -102,13 +102,13 @@ class DirectedCycle {
             }
             if (first != last) {
                 System.err.printf(
-                    "cycle begins with %d and ends with %d\n",
-                    first, last);
+                    "cycle begins with %d and ends with %d\n", first, last);
                 return false;
             }
         }
-
-
         return true;
     }
 }
+
+
+

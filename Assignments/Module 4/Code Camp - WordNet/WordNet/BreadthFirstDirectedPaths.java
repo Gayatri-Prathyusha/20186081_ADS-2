@@ -1,52 +1,76 @@
+/**
+ * Class for breadth first directed paths.
+ */
 public class BreadthFirstDirectedPaths {
+    /**
+     * infinity.
+     */
     private static final int INFINITY = Integer.MAX_VALUE;
+    /**
+     * marked array.
+     */
     private boolean[] marked;  // marked[v] = is there an s->v path?
+    /**
+     * edge to array.
+     */
     private int[] edgeTo;      // edgeTo[v] = last edge on shortest s->v path
+    /**
+     * distTo array.
+     */
     private int[] distTo;      // distTo[v] = length of shortest s->v path
 
     /**
-     * Computes the shortest path from {@code s} and every other vertex in graph {@code G}.
-     * @param G the digraph
+     * Computes the shortest path from
+     *  {@code s} and every other vertex in graph {@code G}.
+     * @param g the digraph
      * @param s the source vertex
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public BreadthFirstDirectedPaths(Digraph G, int s) {
-        marked = new boolean[G.ver()];
-        distTo = new int[G.ver()];
-        edgeTo = new int[G.ver()];
-        for (int v = 0; v < G.ver(); v++)
+    public BreadthFirstDirectedPaths(final Digraph g, final int s) {
+        marked = new boolean[g.v()];
+        distTo = new int[g.v()];
+        edgeTo = new int[g.v()];
+        for (int v = 0; v < g.v(); v++) {
             distTo[v] = INFINITY;
+        }
         validateVertex(s);
-        bfs(G, s);
+        bfs(g, s);
     }
 
     /**
-     * Computes the shortest path from any one of the source vertices in {@code sources}
+     * Computes the shortest path from
+     * any one of the source vertices in {@code sources}
      * to every other vertex in graph {@code G}.
-     * @param G the digraph
+     * @param g the digraph
      * @param sources the source vertices
      * @throws IllegalArgumentException unless each vertex {@code v} in
      *         {@code sources} satisfies {@code 0 <= v < V}
      */
-    public BreadthFirstDirectedPaths(Digraph G, Iterable<Integer> sources) {
-        marked = new boolean[G.ver()];
-        distTo = new int[G.ver()];
-        edgeTo = new int[G.ver()];
-        for (int v = 0; v < G.ver(); v++)
+    public BreadthFirstDirectedPaths(final
+        Digraph g, final Iterable<Integer> sources) {
+        marked = new boolean[g.v()];
+        distTo = new int[g.v()];
+        edgeTo = new int[g.v()];
+        for (int v = 0; v < g.v(); v++) {
             distTo[v] = INFINITY;
+        }
         validateVertices(sources);
-        bfs(G, sources);
+        bfs(g, sources);
     }
-
-    // BFS from single source
-    private void bfs(Digraph G, int s) {
+    /**
+     * bfs method.
+     *
+     * @param      g    digraph.
+     * @param      s    integer variable.
+     */
+    private void bfs(final Digraph g, final int s) {
         Queue<Integer> q = new Queue<Integer>();
         marked[s] = true;
         distTo[s] = 0;
         q.enqueue(s);
         while (!q.isEmpty()) {
             int v = q.dequeue();
-            for (int w : G.adj(v)) {
+            for (int w : g.adj(v)) {
                 if (!marked[w]) {
                     edgeTo[w] = v;
                     distTo[w] = distTo[v] + 1;
@@ -56,9 +80,14 @@ public class BreadthFirstDirectedPaths {
             }
         }
     }
-
-    // BFS from multiple sources
-    private void bfs(Digraph G, Iterable<Integer> sources) {
+    /**
+     * bfs method.
+     *
+     * @param      g  digraph.
+     * @param      sources  The sources
+     */
+    private void bfs(final Digraph g,
+                     final Iterable<Integer> sources) {
         Queue<Integer> q = new Queue<Integer>();
         for (int s : sources) {
             marked[s] = true;
@@ -67,7 +96,7 @@ public class BreadthFirstDirectedPaths {
         }
         while (!q.isEmpty()) {
             int v = q.dequeue();
-            for (int w : G.adj(v)) {
+            for (int w : g.adj(v)) {
                 if (!marked[w]) {
                     edgeTo[w] = v;
                     distTo[w] = distTo[v] + 1;
@@ -79,12 +108,13 @@ public class BreadthFirstDirectedPaths {
     }
 
     /**
-     * Is there a directed path from the source {@code s} (or sources) to vertex {@code v}?
+     * Is there a directed path from the
+     * source {@code s} (or sources) to vertex {@code v}?
      * @param v the vertex
      * @return {@code true} if there is a directed path, {@code false} otherwise
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public boolean hasPathTo(int v) {
+    public boolean hasPathTo(final int v) {
         validateVertex(v);
         return marked[v];
     }
@@ -96,7 +126,7 @@ public class BreadthFirstDirectedPaths {
      * @return the number of edges in a shortest path
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public int distTo(int v) {
+    public int distTo(final int v) {
         validateVertex(v);
         return distTo[v];
     }
@@ -108,34 +138,47 @@ public class BreadthFirstDirectedPaths {
      * @return the sequence of vertices on a shortest path, as an Iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public Iterable<Integer> pathTo(int v) {
+    public Iterable<Integer> pathTo(final int v) {
         validateVertex(v);
 
-        if (!hasPathTo(v)) return null;
+        if (!hasPathTo(v)) {
+            return null;
+        }
         Stack<Integer> path = new Stack<Integer>();
         int x;
-        for (x = v; distTo[x] != 0; x = edgeTo[x])
+        for (x = v; distTo[x] != 0; x = edgeTo[x]) {
             path.push(x);
+        }
         path.push(x);
         return path;
     }
 
-    // throw an IllegalArgumentException unless {@code 0 <= v < V}
-    private void validateVertex(int v) {
-        int V = marked.length;
-        if (v < 0 || v >= V)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
+    /**
+     * validate vertex method.
+     *
+     * @param      v   integer variable.
+     */
+    private void validateVertex(final int v) {
+        int ve = marked.length;
+        if (v < 0 || v >= ve) {
+            throw new IllegalArgumentException("vertex "
+             + v + " is not between 0 and " + (v - 1));
+        }
     }
-
-    // throw an IllegalArgumentException unless {@code 0 <= v < V}
-    private void validateVertices(Iterable<Integer> vertices) {
+    /**
+     * validate vertices.
+     *
+     * @param      vertices  The vertices
+     */
+    private void validateVertices(final Iterable<Integer> vertices) {
         if (vertices == null) {
             throw new IllegalArgumentException("argument is null");
         }
-        int V = marked.length;
+        int ve = marked.length;
         for (int v : vertices) {
-            if (v < 0 || v >= V) {
-                throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
+            if (v < 0 || v >= v) {
+                throw new IllegalArgumentException("vertex "
+                 + v + " is not between 0 and " + (ve - 1));
             }
         }
     }

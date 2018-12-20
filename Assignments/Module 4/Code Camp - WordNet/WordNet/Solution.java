@@ -1,53 +1,59 @@
+import java.util.Scanner;
 /**
- * class for Solution.
+ * Class for solution.
  */
-public final class Solution {
+class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() {
-        //empty constructor.
+    protected Solution() {
+
     }
     /**
-     * Client program.
-     *
+     * main method.
+     *Time Complexity : O(V).
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        String synsets = StdIn.readLine();
-        String hypernyms = StdIn.readLine();
-        String str2 = StdIn.readLine();
-        switch (str2) {
-        case "Graph":
-            try {
-                WordNet wordnet = new WordNet(synsets, hypernyms);
-                wordnet.display();
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
+        Scanner sc = new Scanner(System.in);
+        String synset = sc.nextLine();
+        String hypernyms = sc.nextLine();
+        try {
+            WordNet w = new WordNet(synset, hypernyms);
+            String inputType = sc.nextLine();
+            if (w.gethasCycle()) {
+                System.out.println("Cycle detected");
+                return;
             }
-            break;
-        case "Queries":
-            try {
-                WordNet wordnetqueries = new WordNet(synsets,
-                                          hypernyms);
-                while (StdIn.hasNextLine()) {
-                    String line = StdIn.readLine();
-                    String[] strarray = line.split(" ");
-                    if (strarray[0].equals("null")) {
-                        throw new IllegalArgumentException(
-                            "IllegalArgumentException");
-                    }
-                    System.out.println("distance = " + wordnetqueries.distance(strarray[0],
-                                       strarray[1]) + ", ancestor = " + wordnetqueries.sap(strarray[0],
-                                               strarray[1]));
+
+            if (inputType.equals("Graph")) {
+                w.checkMultipleRoots();
+                if (w.gethasMultipleRoots()) {
+                    return;
+                } else {
+
+                    System.out.println(w.getDigraph());
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println(e.getMessage());
             }
-            break;
-        default:
-            break;
+            if (inputType.equals("Queries")) {
+                while (sc.hasNextLine()) {
+                    String[] tokens = sc.nextLine().split(" ");
+                    try {
+                        w.sap(tokens[0], tokens[1]);
+                        System.out.println("distance = "
+                         + w.distance(tokens[0], tokens[1])
+                          + ", ancestor = " + w.sap(tokens[0], tokens[1]));
+
+                    } catch (Exception e) {
+                        System.out.println("IllegalArgumentException");
+                    }
+                }
+
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }
+
+

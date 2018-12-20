@@ -157,8 +157,7 @@ public final class In {
         if (name == null) throw new IllegalArgumentException("argument is null");
         try {
             // first try to read file from local file system
-            String path = ".\\Files\\" + name;
-            File file = new File(path);
+            File file = new File(name);
             if (file.exists()) {
                 // for consistency with StdIn, wrap with BufferedInputStream instead of use
                 // file as argument to Scanner
